@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/changeportfolio.css" />
+
+
+{% endblock %}
+
+{% block content  %}
+
+
+<h1> modifier vos creations</h1>
+
+
+
+
+
+
+
+
+
+
+{% for data in portfolio %}
+
+
+
+
+
+<form method="post" class="modifiCreation">
+  <label>non de l'image</label>
+<input class="form-control form-control-lg" type="text" name="namepicture"  value="{{data.link}}">
+<input class="form-control form-control-lg" type="HIDDEN" name="id">
+
+  <div class="form-group">
+    <label>catégories</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="listecategories">
+      <option >{{data.namecategories}}</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">commentaire</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details">{{data.description}}</textarea>
+  </div>
+  <input type="submit" value="valider">
+</form>
+
+{% endfor%}
+
+
+{% endblock  %}
