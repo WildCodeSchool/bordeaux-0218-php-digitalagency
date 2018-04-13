@@ -1,0 +1,44 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block stylesheet %}
+
+<link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
+
+
+{% endblock %}
+
+{% block content %}
+<div id="wrapPortfolio">
+  
+<H1 class="text-center">PORTFOLIO DE L'AGENCE DIGITALE</H1>
+
+
+  <div class="toolbar mb2 mt2 text-center">
+    <button class="btn fil-cat" data-rel="all">ALL</button>
+    <button class="btn fil-cat" data-rel="creations">CREATIONS</button>
+    <button class="btn fil-cat" data-rel="ecommerce">ECOMMERCE</button>
+    <button class="btn fil-cat" data-rel="services">SERVICES</button>
+</div> 
+ 
+  <div id="portfolio">
+   
+        {% for pf in portfolios %}
+            <div class="tile scale-anm web all {{ pf.categorie }}">
+                  <img src="/assets/images/{{ pf.link }}" alt="{{ pf.alt }}" />
+            </div>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    
+</div>
+
+<div style="clear:both;"></div>  
+
+
+</div>
+
+  {% block javascript %}
+    <script src="assets/js/portfolio.js"> </script>
+  {% endblock %}
+{% endblock %}

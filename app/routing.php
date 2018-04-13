@@ -15,5 +15,15 @@ $routes = [
         ['add', '/item/add', 'GET'], // action, url, method
         ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
-    ],
+
+        ],
+
+
+
+
+      'Portfolio' => [
+        	['index', '/portfolio', 'GET'],
+        	['admin', '/portfolio/admin', 'GET'],
+        	['chantier', '/portfolio/chantier{id:\d+}', 'GET']
+        ]
 ];
