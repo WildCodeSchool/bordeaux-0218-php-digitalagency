@@ -71,8 +71,8 @@ class PortfolioManager extends AbstractManager
 
       $namepicture = $data['namepicture'];
       $categories = $data['listecategories'];
-    $details= $data['details'];
-    $id = $data['id'];
+      $details= $data['details'];
+      $id = $data['id'];
 
 
 
@@ -80,12 +80,10 @@ class PortfolioManager extends AbstractManager
        SET description='$details' , link= '$namepicture', id_categories= '$categories'
        WHERE id='$id'" ;
 
-        var_dump($request);
-
       $statement = $this->pdoConnection->prepare($request);
       $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
       $statement->bindValue($details ,$details, \PDO::PARAM_STR);
-      $statement->bindValue($categories, $categories, \PDO::PARAM_STR);
+      $statement->bindValue($categories, $categories, \PDO::PARAM_INT);
       $statement->bindValue($id, $id, \PDO::PARAM_INT);
       $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
       $statement->execute();

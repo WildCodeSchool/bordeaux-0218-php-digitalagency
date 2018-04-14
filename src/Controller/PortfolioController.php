@@ -79,11 +79,12 @@ class PortfolioController extends AbstractController
 
 
       if(isset($_POST['validation'])){
-        
+
         $portfolioManager = new PortfolioManager();
         $portfolio = $portfolioManager->updatePerso($_POST);
-
+          header('location: change');
           return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+
 
       }
       else{
