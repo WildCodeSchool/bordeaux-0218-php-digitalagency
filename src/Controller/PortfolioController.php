@@ -18,7 +18,7 @@ use Model\PortfolioManager;
 */
 class PortfolioController extends AbstractController
 {
-    public function index()
+  public function index()
   {
     $portfolioManager = new PortfolioManager();
     $portfolio = $portfolioManager->selectAll();
@@ -27,71 +27,71 @@ class PortfolioController extends AbstractController
 
   public function adminCreate()
   {
-      if(!empty($_POST) and !empty($_FILES)){
-        $PortfolioManager = new PortfolioManager();
+    if(!empty($_POST) and !empty($_FILES)){
+      $PortfolioManager = new PortfolioManager();
 
-        $fileName= $_FILES['picture']['name'];
+      $fileName= $_FILES['picture']['name'];
 
-        	$file_tmp_name = $_FILES['picture']['tmp_name'];
-        	$file_destination = '../public/assets/images/'.$fileName;
-        	$fileextension = strrchr($fileName,'.');
-        	$sizefile = $_FILES['picture']['size'];
+      $file_tmp_name = $_FILES['picture']['tmp_name'];
+      $file_destination = '../public/assets/images/'.$fileName;
+      $fileextension = strrchr($fileName,'.');
+      $sizefile = $_FILES['picture']['size'];
 
-          $extension= ['.jpg','.png'];
+      $extension= ['.jpg','.png'];
 
-        	if(in_array($fileextension,$extension)){
-
-
-        		if(move_uploaded_file($file_tmp_name,$file_destination)){
-
-        			echo 'image uploadée ';
-
-        		}
-        	}
-
-        	else{
-        		echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
-        	}
-
-          $_POST['picture'] =  $file_destination;
+      if(in_array($fileextension,$extension)){
 
 
-          $Portfolio = $PortfolioManager->insert($_POST);
+        if(move_uploaded_file($file_tmp_name,$file_destination)){
 
-
-          return $this->twig->render('Portfolio/adminCreate.html.twig',['Portfolio'=>$Portfolio]);
+          echo 'image uploadée ';
 
         }
-        else{
+      }
 
-          return $this->twig->render('Portfolio/adminCreate.html.twig');
+      else{
+        echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
+      }
 
-        }
+      $_POST['picture'] =  $file_destination;
+
+
+      $Portfolio = $PortfolioManager->insert($_POST);
+
+
+      return $this->twig->render('Portfolio/adminCreate.html.twig',['Portfolio'=>$Portfolio]);
+
+    }
+    else{
+
+      return $this->twig->render('Portfolio/adminCreate.html.twig');
+
+    }
 
 
   }
 
- public function adminChange(){
+  public function adminChange(){
 
 
-   $portfolioManager = new PortfolioManager();
-   $portfolio = $portfolioManager->selectAllPerso();
+    $portfolioManager = new PortfolioManager();
+    $portfolio = $portfolioManager->selectAllPerso();
 
 
-      if(isset($_POST['validation'])){
+    if(isset($_POST['validation'])){
 
-        $portfolioManager = new PortfolioManager();
-        $portfolio = $portfolioManager->updatePerso($_POST);
-          header('location: change');
-          return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+      $portfolioManager = new PortfolioManager();
+      $portfolio = $portfolioManager->updatePerso($_POST);
+      header('location: change');
+      return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
 
-      }
-      else{
-        return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+    }
+    else{
+      return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
-      }
-}
+    }
+  }
 
 
   /**
