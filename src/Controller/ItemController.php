@@ -144,7 +144,7 @@ class ItemController extends AbstractController
       }
 
     }
-    return $this->twig->render('Item/contact.html.twig', ['items' => $items]);
+    return $this->twig->render('Item/contact.html.twig');
 
 
 

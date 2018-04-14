@@ -48,22 +48,29 @@ class Portfolio
         return $this->link;
     }
 
-    public function GetDescription(): string
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    public function SetDescription($description):Portfolio
+    public function setDescription($description):Portfolio
     {
         $this->description = $description;
 
         return $this;
     }
 
-    public function id_categories(): string
+    public function getid_categories(): string
     {
         return $this->id_categories;
     }
+
+    public function setid_categories(): string
+    {
+        return $this->id_categories = $id_categories;
+    }
+
+
     /**
      * @param mixed $title
      *

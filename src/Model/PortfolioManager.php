@@ -29,8 +29,9 @@ class PortfolioManager extends AbstractManager
       $categories = $data['categories'] ;
       $description = $data['description'];
         //var_dump($data['picture']);
-      $add = 'INSERT INTO '.$this->table.'(link, description, id_categories) VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
-        var_dump($add);
+      $add = 'INSERT INTO '.$this->table.'(link, description, id_categories)
+      VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
+
 
       $statement = $this->pdoConnection->prepare($add);
       $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
@@ -52,9 +53,44 @@ class PortfolioManager extends AbstractManager
 
     public function selectAllPerso()
     {
-      return $this->pdoConnection->query('SELECT * FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id GROUP BY Portfolio.id ORDER BY Portfolio.id DESC',
+      return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
+        FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
+        ORDER BY Portfolio.id DESC',
        \PDO::FETCH_CLASS,
        $this->className)->fetchAll();
+
+    }
+
+
+    /**
+     * @param int   $id   Id of the row to update
+     * @param array $data $data to update
+     */
+    public function updatePerso($data)
+    {
+
+      $namepicture = $data['namepicture'];
+      $categories = $data['listecategories'];
+    $details= $data['details'];
+    $id = $data['id'];
+
+
+
+      $request = "UPDATE $this->table
+       SET description='$details' , link= '$namepicture', id_categories= '$categories'
+       WHERE id='$id'" ;
+
+        var_dump($request);
+
+      $statement = $this->pdoConnection->prepare($request);
+      $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
+      $statement->bindValue($details ,$details, \PDO::PARAM_STR);
+      $statement->bindValue($categories, $categories, \PDO::PARAM_STR);
+      $statement->bindValue($id, $id, \PDO::PARAM_INT);
+      $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
+      $statement->execute();
+
+
 
     }
 

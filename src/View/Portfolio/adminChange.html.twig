@@ -10,17 +10,7 @@
 
 <h1> modifier vos creations</h1>
 
-
-
-
-
-
-
-
-
-
 {% for data in portfolio %}
-
 
 
 
@@ -28,16 +18,16 @@
 <form method="post" class="modifiCreation">
   <label>non de l'image</label>
 <input class="form-control form-control-lg" type="text" name="namepicture"  value="{{data.link}}">
-<input class="form-control form-control-lg" type="HIDDEN" name="id">
+<input class="form-control form-control-lg" type="HIDDEN" name="id" value="{{data.id}}">
 
   <div class="form-group">
     <label>catégories</label>
     <select class="form-control" id="exampleFormControlSelect1" name="listecategories">
-      <option >{{data.namecategories}}</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option selected>{{data.namecategories}}</option>
+      <option value="3">refonte</option>
+      <option value="1">vitrine</option>
+      <option value="4">i-commerce</option>
+      <option value="5">gestion de stock</option>
     </select>
   </div>
 
@@ -45,7 +35,7 @@
     <label for="exampleFormControlTextarea1">commentaire</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details">{{data.description}}</textarea>
   </div>
-  <input type="submit" value="valider">
+  <input type="submit" value="valider" name="validation">
 </form>
 
 {% endfor%}

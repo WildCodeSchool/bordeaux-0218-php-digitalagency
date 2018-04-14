@@ -57,10 +57,10 @@ class PortfolioController extends AbstractController
 
 
           $Portfolio = $PortfolioManager->insert($_POST);
-          var_dump($_POST['description']);
+
 
           return $this->twig->render('Portfolio/adminCreate.html.twig',['Portfolio'=>$Portfolio]);
-          
+
         }
         else{
 
@@ -73,16 +73,24 @@ class PortfolioController extends AbstractController
 
  public function adminChange(){
 
-    $portfolioManager = new PortfolioManager();
-    $portfolio = $portfolioManager->selectAllPerso();
+
+   $portfolioManager = new PortfolioManager();
+   $portfolio = $portfolioManager->selectAllPerso();
 
 
-    return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+      if(isset($_POST['validation'])){
+        
+        $portfolioManager = new PortfolioManager();
+        $portfolio = $portfolioManager->updatePerso($_POST);
 
+          return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
+      }
+      else{
+        return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
-
-  }
+      }
+}
 
 
   /**
