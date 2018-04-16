@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+
+<form method="post" >
+
+  <label>nom </label><input type="text" name="nom" >
+
+  <label>prenom </label><input type="text" name="prenom" required>
+
+  <label>telephone </label><input type="tel" name="telephone" required>
+
+  <label>adresse email</label><input type="email" name="mail" required>
+  <label>message </label><textarea cols="20" rows="5" name="message" required> </textarea>
+
+  <input type="submit" value="envoyer">
+
+
+  </form>
+
+{% endblock %}
