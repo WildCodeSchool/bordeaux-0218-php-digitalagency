@@ -85,24 +85,4 @@ class Portfolio
     return $this->id_categories = $id_categories;
   }
 
-
-
-    /**
-     * @return string
-     */
-    public function getAlt(): string
-    {
-      return $this->alt;
-    }
-
-    /**
-     * @param string $alt
-     *
-     */
-    public function setAlt($alt):sting
-    {
-      $this->alt = $alt;
-
-    }
-
   }

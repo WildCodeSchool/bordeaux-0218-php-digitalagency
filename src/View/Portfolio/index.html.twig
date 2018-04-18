@@ -8,28 +8,38 @@
 {% endblock %}
 
 {% block content %}
-<div id="wrapPortfolio">
+<div id="Portfolio">
   
 <H1 class="text-center">PORTFOLIO DE L'AGENCE DIGITALE</H1>
 
 
   <div class="toolbar mb2 mt2 text-center">
     <button class="btn fil-cat" data-rel="all">ALL</button>
-    <button class="btn fil-cat" data-rel="creations">CREATIONS</button>
-    <button class="btn fil-cat" data-rel="ecommerce">ECOMMERCE</button>
-    <button class="btn fil-cat" data-rel="services">SERVICES</button>
+    <button class="btn fil-cat" data-rel="creations">VITRINE</button>
+    <button class="btn fil-cat" data-rel="ecommerce">E-COMMERCE</button>
+    <button class="btn fil-cat" data-rel="services">GESTION DE STOCK</button>
 </div> 
  
   <div id="portfolio">
+
+ 
    
-        {% for pf in portfolios %}
-            <div class="tile scale-anm web all {{ pf.categorie }}">
-                  <img src="/assets/images/{{ pf.link }}" alt="{{ pf.alt }}" />
+        {% for pf in portfolio %}
+            <div class="tile scale-anm web all">
+                  <img src="/assets/images/{{ pf.link }}"/>
             </div>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
     
+
+    {% for pf in  vitrine %}
+            <div class="tile scale-anm web creations">
+                  <img src="/assets/images/{{ pf.link }}"/>
+            </div>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
 </div>
 
 <div style="clear:both;"></div>  
@@ -38,6 +48,12 @@
 </div>
 
   {% block javascript %}
+
+<!-- Latest compiled and minified CSS -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+
     <script src="assets/js/portfolio.js"> </script>
   {% endblock %}
 {% endblock %}
