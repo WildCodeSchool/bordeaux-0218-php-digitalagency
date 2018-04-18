@@ -93,40 +93,4 @@ class PortfolioController extends AbstractController
     }
   }
 
-
-  /**
-  * Display Portfolio informations specified by $id
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio edition page specified by $id
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio creation page
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio delete page
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-
 }

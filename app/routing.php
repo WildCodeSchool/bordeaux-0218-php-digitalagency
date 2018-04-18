@@ -16,8 +16,6 @@ $routes = [
         ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
         ['contact', '/contact', ['POST', 'GET']],
-        ['entreprise', '/entreprise', 'GET'],
-        ['blog', '/blog', 'GET']
 ],
 
 'Portfolio' => [ // Controller
@@ -25,9 +23,4 @@ $routes = [
     ['adminCreate', '/portfolio/create', ['GET','POST']], // action, url, method
     ['adminChange', '/portfolio/change', ['GET','POST']],
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
-
-],
-
-
-
 ];

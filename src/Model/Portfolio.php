@@ -1,11 +1,11 @@
 <?php
 /**
-* Created by PhpStorm.
-* User: wcs
-* Date: 23/10/17
-* Time: 10:57
-* PHP version 7
-*/
+ * Created by PhpStorm.
+ * User: wcs
+ * Date: 23/10/17
+ * Time: 10:57
+ * PHP version 7
+ */
 
 namespace Model;
 
@@ -48,6 +48,21 @@ class Portfolio
     return $this->link;
   }
 
+  
+  /**
+  * @param mixed $title
+  *
+  * @return Portfolio
+  */
+  public function setLink($link):Portfolio
+  {
+    $this->link = $link;
+
+    return $this;
+  }
+
+
+
   public function getDescription(): string
   {
     return $this->description;
@@ -71,17 +86,23 @@ class Portfolio
   }
 
 
-  /**
-  * @param mixed $title
-  *
-  * @return Portfolio
-  */
-  public function setLink($link):Portfolio
-  {
-    $this->link = $link;
 
-    return $this;
+    /**
+     * @return string
+     */
+    public function getAlt(): string
+    {
+      return $this->alt;
+    }
+
+    /**
+     * @param string $alt
+     *
+     */
+    public function setAlt($alt):sting
+    {
+      $this->alt = $alt;
+
+    }
+
   }
-
-
-}
