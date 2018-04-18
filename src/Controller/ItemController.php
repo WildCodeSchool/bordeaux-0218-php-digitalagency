@@ -95,7 +95,14 @@ class ItemController extends AbstractController
   }
 
   public function contact( )
-  {
+  {  /*
+  *
+  *
+  *
+  * Display item listing
+  *
+  * @return string
+  */
 
     if(isset($_POST['nom']) and  isset($_POST['prenom']) and isset($_POST['telephone']) and isset($_POST['mail']))
     {
