@@ -35,9 +35,7 @@ body{
     transition: all 350ms ease;
 
   }
-  .tile:hover { 
 
-  }
 
   .scale-anm {
     transform: scale(1);
