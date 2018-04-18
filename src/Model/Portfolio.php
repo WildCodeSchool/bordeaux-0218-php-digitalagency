@@ -10,60 +10,89 @@
 namespace Model;
 
 /**
- * Class Item
- *
- */
+* Class Portfolio
+*
+*/
 class Portfolio
 {
-    private $id;
+  private $id;
+  private $link;
+  private $description;
+  private $id_categories;
 
-    private $link;
-    private $alt;
-    private $categorie;
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
+  /**
+  * @return int
+  */
+  public function getId(): int
+  {
+    return $this->id;
+  }
 
-    /**
-     * @param mixed $id
-     *
-     * @return Item
-     */
-    public function setId($id): Item
-    {
-        $this->id = $id;
+  /**
+  * @param mixed $id
+  *
+  * @return Portfolio
+  */
+  public function setId($id): Portfolio
+  {
+    $this->id = $id;
 
-        return $this;
-    }
+    return $this;
+  }
 
-    /**
-     * @return string
-     */
-    public function getLink(): string
-    {
-        return $this->link;
-    }
+  /**
+  * @return mixed
+  */
+  public function getLink(): string
+  {
+    return $this->link;
+  }
 
-    /**
-     * @param string $link
-     *
-     */
-    public function setLink($link):sting
-    {
-        $this->link = $link;
+  
+  /**
+  * @param mixed $title
+  *
+  * @return Portfolio
+  */
+  public function setLink($link):Portfolio
+  {
+    $this->link = $link;
 
-    }
+    return $this;
+  }
+
+
+
+  public function getDescription(): string
+  {
+    return $this->description;
+  }
+
+  public function setDescription($description):Portfolio
+  {
+    $this->description = $description;
+
+    return $this;
+  }
+
+  public function getid_categories(): string
+  {
+    return $this->id_categories;
+  }
+
+  public function setid_categories(): string
+  {
+    return $this->id_categories = $id_categories;
+  }
+
+
 
     /**
      * @return string
      */
     public function getAlt(): string
     {
-        return $this->alt;
+      return $this->alt;
     }
 
     /**
@@ -72,25 +101,8 @@ class Portfolio
      */
     public function setAlt($alt):sting
     {
-        $this->alt = $alt;
+      $this->alt = $alt;
 
     }
 
-    /**
-     * @return string
-     */
-    public function getCategorie(): string
-    {
-        return $this->categorie;
-    }
-
-    /**
-     * @param string $categorie
-     *
-     */
-    public function setCategorie($categorie):sting
-    {
-        $this->categorie = $categorie;
-
-    }
-}
+  }

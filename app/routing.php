@@ -15,15 +15,12 @@ $routes = [
         ['add', '/item/add', 'GET'], // action, url, method
         ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
+        ['contact', '/contact', ['POST', 'GET']],
+],
 
-        ],
-
-
-
-
-      'Portfolio' => [
-        	['index', '/portfolio', 'GET'],
-        	['admin', '/portfolio/admin', 'GET'],
-        	['chantier', '/portfolio/chantier{id:\d+}', 'GET']
-        ]
+'Portfolio' => [ // Controller
+    ['index', '/portfolio', 'GET'],
+    ['adminCreate', '/portfolio/create', ['GET','POST']], // action, url, method
+    ['adminChange', '/portfolio/change', ['GET','POST']],
+    ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
 ];

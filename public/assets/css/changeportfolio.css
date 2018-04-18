@@ -1,0 +1,22 @@
+body{
+  background-color: gray;
+
+}
+
+
+h1, h2{
+  text-align: center;
+
+}
+
+.modifiCreation{
+  width:40%;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+}
+label{
+  float: left;
+  width: 300px;
+  display: block;
+}
