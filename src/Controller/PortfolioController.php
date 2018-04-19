@@ -22,14 +22,15 @@ class PortfolioController extends AbstractController
   {
     $portfolioManager = new PortfolioManager();
     $portfolio = $portfolioManager->selectAllPerso();
-    $vitrine = $portfolioManager->selectVitrine();
+    // $vitrine = $portfolioManager->selectVitrine();
 
     
     
     return $this->twig->render('Portfolio/index.html.twig',
      ['portfolio' => $portfolio,
 
-     'vitrine' => $vitrine]
+     'vitrine' => $vitrine,
+    ]
     
 
   );

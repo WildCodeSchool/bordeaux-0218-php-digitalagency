@@ -2,7 +2,7 @@
 
 {% block stylesheet %}
 
-<link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
+
 
 
 {% endblock %}
@@ -10,36 +10,43 @@
 {% block content %}
 <div id="Portfolio">
   
-<H1 class="text-center">PORTFOLIO DE L'AGENCE DIGITALE</H1>
+<h1 style="margin-top: 50px;" class="text-center mb-5">PORTFOLIO DE L'AGENCE DIGITALE</h1>
 
 
-  <div class="toolbar mb2 mt2 text-center">
-    <button class="btn fil-cat" data-rel="all">ALL</button>
-    <button class="btn fil-cat" data-rel="creations">VITRINE</button>
-    <button class="btn fil-cat" data-rel="ecommerce">E-COMMERCE</button>
-    <button class="btn fil-cat" data-rel="services">GESTION DE STOCK</button>
-</div> 
+<h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins. Prenez quelques minutes pour découvrir nos réalisations !!</h3>
+
+  <div class="toolbar mb-5 mt-5 text-center">
+    <button class="btn color-btn fil-cat" data-rel="all">ALL</button>
+    <button class="btn color-btn fil-cat" data-rel="vitrine">VITRINE</button>
+    <button class="btn color-btn fil-cat" data-rel="e-commerce">E-COMMERCE</button>
+    <button class="btn color-btn fil-cat" data-rel="gestionDeStock">GESTION DE STOCK</button>
+  </div> 
  
   <div id="portfolio">
+      {% for pf in portfolio %}
+        <div class="tile scale-anm web all {{ pf.namecategories }}">
+          <img class="zoom" src="/assets/images/{{ pf.link }}"/>
+        </div>
+      {% endfor %}
 
- 
-   
-        {% for pf in portfolio %}
-            <div class="tile scale-anm web all">
-                  <img src="/assets/images/{{ pf.link }}"/>
-            </div>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    
+   <!--    {% for pf in  vitrine %}
+        <div class="tile scale-anm web vitrine">
+          <img src="/assets/images/{{ pf.link }}"/>
+        </div>
+      {% endfor %}
 
-    {% for pf in  vitrine %}
-            <div class="tile scale-anm web creations">
-                  <img src="/assets/images/{{ pf.link }}"/>
-            </div>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
+      {% for pf in  ecommerce %}
+        <div class="tile scale-anm web ecommerce">
+          <img src="/assets/images/{{ pf.link }}"/>
+        </div>
+      {% endfor %}
+
+      {% for pf in  gestionDeStock %}
+        <div class="tile scale-anm web creations">
+          <img src="/assets/images/{{ pf.link }}"/>
+        </div>
+      {% endfor %} -->
+
 </div>
 
 <div style="clear:both;"></div>  
