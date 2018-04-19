@@ -1,18 +1,20 @@
 {% extends 'layout.html.twig' %}
 
-
+  {% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/contact.css">
+  {% endblock %}
 {% block content %}
 
 <form method="post" >
 
-  <label>nom </label><input type="text" name="nom" >
+  <label>nom </label><input class="form-control" type="text" name="nom" required >
 
-  <label>prenom </label><input type="text" name="prenom" required>
+  <label>prenom </label><input class="form-control" type="text" name="prenom" required>
 
-  <label>telephone </label><input type="tel" name="telephone" required>
+  <label>telephone </label><input class="form-control" type="text" name="telephone" required>
 
-  <label>adresse email</label><input type="email" name="mail" required>
-  <label>message </label><textarea cols="20" rows="5" name="message" required> </textarea>
+  <label for="exampleFormControlInput1" >adresse email</label><input type="email" class="form-control" id="exampleFormControlInput1"  name="mail" required>
+  <label for="exampleFormControlTextarea1">message </label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" required> </textarea>
 
   <input type="submit" value="envoyer">
 

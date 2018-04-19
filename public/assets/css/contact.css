@@ -1,0 +1,20 @@
+body{
+  background-color: #048B9A;
+  font-size: 150%;
+}
+
+form{
+  margin: 0 auto;
+  width: 50%;
+}
+
+label{
+  float: left;
+}
+
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 150%;
+  }
+}

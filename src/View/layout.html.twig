@@ -22,20 +22,8 @@ integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJ
       	<link rel="stylesheet" href="/assets/css/style2.css"> <!-- Resource style -->
 
     {% block stylesheet %}
-    <header class="cd-header">
-      <div id="cd-logo"><a href="http://localhost:8000/contact">Contact</a></div>
-      <a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
-    </header>
-    <nav id="main-nav">
-    	<ul>
-        <li><a href="http://localhost:8000"><span>Acceuil</span></a></li>
-    		<li><a href="http://localhost:8000/portfolio"><span>Portfolio</span></a></li>
-    		<li><a href="http://localhost:8000/contact"><span>Contact</span></a></li>
-    		<li><a href="#0"><span>Blog</span></a></li>
-    		<li><a href="#0"><span>L'équipe</span></a></li>
-    	</ul>
-    	<a href="#0" class="cd-close-menu">Close<span></span></a>
-    </nav>
+
+
 
 
     {% endblock %}
@@ -43,7 +31,26 @@ integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJ
 </head>
 
 <body>
-{% block content %}{% endblock %}
+  <header class="cd-header">
+    <div id="cd-logo"><a href="http://localhost:8000/contact">Contact</a></div>
+    <a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="http://localhost:8000"><span>Acceuil</span></a></li>
+      <li><a href="http://localhost:8000/portfolio"><span>Portfolio</span></a></li>
+      <li><a href="http://localhost:8000/contact"><span>Contact</span></a></li>
+      <li><a href="#0"><span>Blog</span></a></li>
+      <li><a href="#0"><span>L'équipe</span></a></li>
+    </ul>
+    <a href="#0" class="cd-close-menu">Close<span></span></a>
+  </nav>
+{% block content %}
+
+
+
+{% endblock %}
 </body>
 
 {% block javascript %}
