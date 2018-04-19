@@ -2,23 +2,27 @@
 
   {% block stylesheet %}
 <link rel="stylesheet" href="/assets/css/contact.css">
+
+<link rel="stylesheet" href="/assets/css/reset.css">
   {% endblock %}
 {% block content %}
 
-<form method="post" >
+<form method="post">
+  <input type="text" name="nom" class="question form-control" id="nme" required autocomplete="off" />
+  <label for="nme"><span>quel est votre nom?</span></label>
 
-  <label>nom </label><input class="form-control" type="text" name="nom" required >
+  <input type="text" name="prenom" class="question form-control" id="nme" required autocomplete="off" />
+  <label for="nme"><span>quel est votre prenom?</span></label>
 
-  <label>prenom </label><input class="form-control" type="text" name="prenom" required>
+  <input type="text" name="telephone" class="question form-control" id="nme" required autocomplete="off" />
+  <label for="nme"><span>quel est votre numéro de téléphone?</span></label>
 
-  <label>telephone </label><input class="form-control" type="text" name="telephone" required>
+  <input type="text" name="mail" class="question form-control" id="nme" required autocomplete="off" />
+  <label for="nme"><span>quel est votre d'adresse email?</span></label>
+  <textarea name="message" rows="2" class="question form-control" id="msg" required autocomplete="off"></textarea>
+  <label for="msg"><span> votre message</span></label>
+  <input type="submit" value="Valider" />
+</form>
 
-  <label for="exampleFormControlInput1" >adresse email</label><input type="email" class="form-control" id="exampleFormControlInput1"  name="mail" required>
-  <label for="exampleFormControlTextarea1">message </label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" required> </textarea>
-
-  <input type="submit" value="envoyer">
-
-
-  </form>
 
 {% endblock %}
