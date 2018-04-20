@@ -11,7 +11,7 @@
 
 $routes = [
     'Item' => [ // Controller
-        ['index', '/', 'GET'], // action, url, method
+
         ['add', '/item/add', 'GET'], // action, url, method
         ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
@@ -24,4 +24,10 @@ $routes = [
     ['adminChange', '/portfolio/change', ['GET','POST']],
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
 ],
+'tetraDigital' => [ // Controller
+    ['tetradigital', '/', 'GET'],
+    ['login', '/login', ['GET','POST']]
+
+  ],
+
 ];
