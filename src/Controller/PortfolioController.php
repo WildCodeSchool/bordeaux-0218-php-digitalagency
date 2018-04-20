@@ -56,7 +56,7 @@ class PortfolioController extends AbstractController
 
         if(move_uploaded_file($file_tmp_name,$file_destination)){
 
-          echo 'image uploadée ';
+        $picture = 'image uploadée ';
 
         }
       }
