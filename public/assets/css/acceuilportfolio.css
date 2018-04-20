@@ -1,20 +1,26 @@
 body{
   color:black;
   min-height: 100vh;
-  background: #fff url("../images/Siemens7.jpg") no-repeat center;
+  background-color: #f0f0f0 ;
   background-size: cover;
-  @font-face {
+  color: #0c0c0c;
+ 
+  /*@font-face {
     font-family: 'quadranta';
     src: url('quadranta.eot');
     src: url('quadranta.otf') format('truetype'),
     font-weight: normal;
     font-style: normal;
-  }
+  }*/
 }
 
-  #wrapPortfolio h1 {
-    color: pink;
-
+.sdkugfh {
+  color: #CECECE; /* gris*/
+  color: #97DFC6; /* turquoise*/
+  color: #048B9A; /* bleu*/
+}
+  #Portfolio h1 {
+     font-family: 'Kavivanar', cursive;
   }
   #portfolio {  
     margin: 1rem 0;
@@ -34,6 +40,16 @@ body{
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
 
+  }
+  .tile img:hover{ 
+    width: 900px;
+  }
+  .color-btn {
+    color: #048B9A!important;
+  }
+  .color-btn:hover {
+    background-color: #CECECE;
+  
   }
 
 

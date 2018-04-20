@@ -21,8 +21,20 @@ class PortfolioController extends AbstractController
   public function index()
   {
     $portfolioManager = new PortfolioManager();
-    $portfolio = $portfolioManager->selectAll();
-    return $this->twig->render('Portfolio/index.html.twig', ['portfolio' => $portfolio]);
+    $portfolio = $portfolioManager->selectAllPerso();
+    // $vitrine = $portfolioManager->selectVitrine();
+
+    
+    
+    return $this->twig->render('Portfolio/index.html.twig',
+     ['portfolio' => $portfolio,
+
+     'vitrine' => $vitrine,
+    ]
+    
+
+  );
+   
   }
 
   public function adminCreate()
@@ -44,7 +56,7 @@ class PortfolioController extends AbstractController
 
         if(move_uploaded_file($file_tmp_name,$file_destination)){
 
-          echo 'image uploadée ';
+        $picture = 'image uploadée ';
 
         }
       }
@@ -53,7 +65,7 @@ class PortfolioController extends AbstractController
         echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
       }
 
-      $_POST['picture'] =  $file_destination;
+      $_POST['picture'] =  $fileName;
 
 
       $Portfolio = $PortfolioManager->insert($_POST);
