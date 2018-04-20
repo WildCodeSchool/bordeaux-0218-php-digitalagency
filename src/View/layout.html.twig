@@ -16,10 +16,10 @@ integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJ
 
     <title>{% block title %}{% endblock %}</title>
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
 
-      <link rel="stylesheet" href="/assets/css/reset.css"> <!-- CSS reset -->
       	<link rel="stylesheet" href="/assets/css/style2.css"> <!-- Resource style -->
+        <link rel="stylesheet" href="/assets/css/reset.css"> <!-- CSS reset -->
+        <link rel="stylesheet" href="/assets/css/styles.css">
 
     {% block stylesheet %}
 
@@ -54,8 +54,8 @@ integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJ
 </body>
 
 {% block javascript %}
-<script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
 <script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+<script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
 
 
 {% endblock %}
