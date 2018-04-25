@@ -1,0 +1,12 @@
+body{
+  background-color: gray;
+}
+
+form{
+
+  background-color: #E2E4EE;
+  padding: 1%;
+  display: block;
+  width: 30%;
+  margin: auto;
+}

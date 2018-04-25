@@ -40,7 +40,7 @@ class PortfolioManager extends AbstractManager
     $add = 'INSERT INTO '.$this->table.'(link, description, id_categories)
     VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
 
-
+    
     $statement = $this->pdoConnection->prepare($add);
     $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
     $statement->bindValue('link', $picture, \PDO::PARAM_INT);
@@ -69,6 +69,8 @@ class PortfolioManager extends AbstractManager
 
     }
 
+
+
     /**
     * @param int   $id   Id of the row to update
     * @param array $data $data to update
@@ -82,7 +84,7 @@ class PortfolioManager extends AbstractManager
       $id = $data['id'];
 
 
-      
+
       $request = "UPDATE $this->table
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;
