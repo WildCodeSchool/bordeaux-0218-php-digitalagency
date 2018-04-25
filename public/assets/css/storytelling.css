@@ -53,12 +53,13 @@ h2
 
 /* Morph */
 .morph div img {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   -webkit-filter: grayscale(0) blur(0px);
   filter: grayscale(0) blur(0px);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+
 }
 
 .morph div:hover img {
@@ -82,4 +83,11 @@ h2
 
 .fontStory{
   background-color: white;
+  width : 80%;
+  margin-top : 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
