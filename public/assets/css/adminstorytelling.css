@@ -1,0 +1,15 @@
+body{
+  background-color: white;
+}
+.cd-header {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  background: rgba(58, 57, 63, 0.6);
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}

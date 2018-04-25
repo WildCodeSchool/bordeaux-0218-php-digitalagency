@@ -45,6 +45,27 @@ class tetraDigitalController extends AbstractController
       return $this->twig->render('tetraDigital/storytelling.html.twig');
     }
 
+    public function adminStorytelling()
+    {
+      $file = "../src/View/tetraDigital/story.html.twig";
+
+        $lecture = file_get_contents($file);
+
+          if (isset($_POST['changeStory'])) {
+            var_dump($_POST['changeStory']);
+            $readFile = fopen($file,"w");
+             fwrite($readFile,$_POST['changeStory']);
+             fclose($readFile);
+             header('location: http://localhost:8000/adminstorytelling ');
+          }
+
+
+
+
+
+      return $this->twig->render('tetraDigital/adminstorytelling.html.twig',['lecture' => $lecture]);
+    }
+
 
 
 

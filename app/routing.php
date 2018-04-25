@@ -30,7 +30,8 @@ $routes = [
 'tetraDigital' => [ // Controller
     ['tetradigital', '/', 'GET'],
     ['login', '/login', ['GET','POST']],
-    ['storytelling', '/storytelling','GET']
+    ['storytelling', '/storytelling','GET'],
+    ['adminstorytelling', '/adminstorytelling',['GET','POST']]
 
 
   ],

@@ -1,3 +1,85 @@
-body{
-  color: white;
+
+
+
+body
+{
+  background-color: #048B9A ;
+}
+
+.img-thumbnail {
+    margin: 0 auto;
+    display: block;
+    height: 450px;
+}
+
+.container-fluid
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+p.Talk
+{
+  padding:5%;
+  margin:2%;
+  width: 95%;
+}
+
+h2
+{
+  text-align: center;
+  color :white;
+  font-size: 300%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.img-thumbnail{  margin: 0 auto;
+  display: block;
+}
+.cd-header {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  background: rgba(58, 57, 63, 0.6);
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+/* Morph */
+.morph div img {
+  width: 200px;
+  height: 150px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.morph div:hover img {
+  width: 150px; /* on affiche l'image au carré */
+  height: 150px;
+  border-radius: 50%;  /* on arrondit l'image */
+  -webkit-transform: rotate(360deg); /* rotation de l'image */
+  transform: rotate(360deg);
+}
+
+.grayscale div img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .1s ease-in-out;
+}
+.grayscale div:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.fontStory{
+  background-color: white;
 }
