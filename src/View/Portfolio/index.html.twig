@@ -45,50 +45,9 @@
   {% block javascript %}
 
 <!-- Latest compiled and minified CSS -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/modernizr.js"></script>
 
     <script src="assets/js/portfolio.js"> </script>
   {% endblock %}
-{% endblock %}
-
-{% block content %}
-<div id="Portfolio">
-  
-<h1 style="margin-top: 50px;" class="text-center mb-5"><strong>PORTFOLIO DE L'AGENCE DIGITALE</strong></h1>
-<h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins. Prenez quelques minutes pour découvrir nos réalisations !!</h3>
-
-  <div class="toolbar mb-5 mt-5 text-center">
-    <button class="btn color-btn fil-cat" data-rel="all">ALL</button>
-    <button class="btn color-btn fil-cat" data-rel="vitrine">VITRINE</button>
-    <button class="btn color-btn fil-cat" data-rel="e-commerce">E-COMMERCE</button>
-    <button class="btn color-btn fil-cat" data-rel="gestionDeStock">GESTION DE STOCK</button>
-    <button class="btn color-btn fil-cat" data-rel="refonte">REFONTE</button>
-  </div> 
- 
-  <div id="portfolio">
-      {% for pf in portfolio %}
-        <div class="tile scale-anm web all {{ pf.namecategories }}">
-          <img class="zoom" src="/assets/images/{{ pf.link }}"/>
-        </div>
-      {% endfor %}
-
-   
-</div>
-
-<div style="clear:both;"></div>  
-
-
-</div>
-
-  {% block javascript %}
-
-<!-- Latest compiled and minified CSS -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
-
-    <script src="assets/js/portfolio.js"> </script>
-  {% endblock %}
-{% endblock %}
+    {% endblock %}
