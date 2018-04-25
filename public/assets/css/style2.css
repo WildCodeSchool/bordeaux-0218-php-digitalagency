@@ -87,7 +87,7 @@ Main components
 #cd-intro {
   position: relative;
   height: 100%;
-  background: url("../images/acceuil.jpg") no-repeat center center;
+  background: url("../images/bridge.jpg") no-repeat center center;
   background-size: cover;
 }
 #cd-intro h1 {
@@ -120,7 +120,7 @@ Main components
 }
 
 .cd-header {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -400,4 +400,8 @@ Main components
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
+}
+
+h1{
+  font-size: 2em;
 }

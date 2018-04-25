@@ -30,7 +30,12 @@ class tetraDigitalController extends AbstractController
 
 
   public function login()
-  {
+  { session_start();
+
+      if(isset($_POST['login']) and isset($_POST['password'])){
+        
+        
+
 
     return $this->twig->render('tetraDigital/login.html.twig');
   }
@@ -52,7 +57,7 @@ class tetraDigitalController extends AbstractController
         $lecture = file_get_contents($file);
 
           if (isset($_POST['changeStory'])) {
-            var_dump($_POST['changeStory']);
+            
             $readFile = fopen($file,"w");
              fwrite($readFile,$_POST['changeStory']);
              fclose($readFile);
@@ -67,7 +72,21 @@ class tetraDigitalController extends AbstractController
     }
 
 
+        $_SESSION['login'] = $_POST['login'];
+        $_SESSION['password'] = $_POST['password'];
 
+
+        if($_POST['login'] == "admin" and $_POST['password'] == "azerty"){
+
+
+
+        return $this->twig->render('Portfolio/adminCreate.html.twig');
+      }
+      }
+      else{
+    return $this->twig->render('tetraDigital/login.html.twig');
+          }
+  }
 
 
   }

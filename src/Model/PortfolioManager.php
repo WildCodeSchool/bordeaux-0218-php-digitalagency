@@ -1,4 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: sylvain
+ * Date: 07/03/18
+ * Time: 18:20
+ * PHP version 7
+ */
+
 namespace Model;
 
 /**
@@ -32,7 +40,7 @@ class PortfolioManager extends AbstractManager
     $add = 'INSERT INTO '.$this->table.'(link, description, id_categories)
     VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
 
-
+    
     $statement = $this->pdoConnection->prepare($add);
     $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
     $statement->bindValue('link', $picture, \PDO::PARAM_INT);
@@ -45,13 +53,13 @@ class PortfolioManager extends AbstractManager
 
 
 
-  public function update(int $id, array $data)
+    public function update(int $id, array $data)
   {
 
   }
 
 
-  public function selectAllPerso()
+    public function selectAllPerso()
   {
     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
       FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
@@ -60,6 +68,7 @@ class PortfolioManager extends AbstractManager
       $this->className)->fetchAll();
 
     }
+
 
 
     /**
@@ -75,7 +84,7 @@ class PortfolioManager extends AbstractManager
       $id = $data['id'];
 
 
-      
+
       $request = "UPDATE $this->table
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;
@@ -88,10 +97,9 @@ class PortfolioManager extends AbstractManager
       $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
       $statement->execute();
 
-
-
     }
-
-
-
   }
+
+
+
+
