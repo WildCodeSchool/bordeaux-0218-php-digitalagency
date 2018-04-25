@@ -24,6 +24,14 @@ $routes = [
     ['adminChange', '/portfolio/change', ['GET','POST']],
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
 ],
+
+'Blog' => [ // Controller
+    ['index', '/blog', 'GET'],
+    ['adminCreate', '/blog/create', ['GET','POST']], // action, url, method
+    ['adminChange', '/blog/change', ['GET','POST']],
+    ['chantier', '/blog/article/{id:\d+}', 'GET'], // action, url, method
+],
+
 'tetraDigital' => [ // Controller
     ['tetradigital', '/', 'GET'],
     ['login', '/login', ['GET','POST']]
