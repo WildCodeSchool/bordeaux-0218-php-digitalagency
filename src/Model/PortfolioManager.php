@@ -53,13 +53,13 @@ class PortfolioManager extends AbstractManager
 
 
 
-  public function update(int $id, array $data)
+    public function update(int $id, array $data)
   {
 
   }
 
 
-  public function selectAllPerso()
+    public function selectAllPerso()
   {
     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
       FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
@@ -69,47 +69,7 @@ class PortfolioManager extends AbstractManager
 
     }
 
-//   public function selectVitrine()
-//   {
-//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
-//       FROM ' . $this->table. '
-//       WHERE id_categories = 1
-//       ORDER BY Portfolio.id DESC',
-//       \PDO::FETCH_CLASS,
-//       $this->className)->fetchAll();
 
-//     }
-
-//     public function selectEcommerce()
-//   {
-//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
-//       FROM ' . $this->table. '
-//       WHERE id_categories = 3
-//       ORDER BY Portfolio.id DESC',
-//       \PDO::FETCH_CLASS,
-//       $this->className)->fetchAll();
-//   }
-
-//   public function selectGestionDeStock()
-//   {
-//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
-//       FROM ' . $this->table. '
-//       WHERE id_categories = 4
-//       ORDER BY Portfolio.id DESC',
-//       \PDO::FETCH_CLASS,
-//       $this->className)->fetchAll();
-// }
-
-
-//     public function selectRefonte()
-//   {
-//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
-//       FROM ' . $this->table. ' JOIN categories ON id_categories = 2
-//       ORDER BY Portfolio.id DESC',
-//       \PDO::FETCH_CLASS,
-//       $this->className)->fetchAll();
-
-//     }
 
     /**
     * @param int   $id   Id of the row to update
@@ -137,10 +97,9 @@ class PortfolioManager extends AbstractManager
       $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
       $statement->execute();
 
-
-
     }
-
-
-
   }
+
+
+
+

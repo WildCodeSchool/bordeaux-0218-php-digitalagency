@@ -26,6 +26,7 @@ class PortfolioController extends AbstractController
 
 
 
+
     return $this->twig->render('Portfolio/index.html.twig',
      ['portfolio' => $portfolio,
 
@@ -34,6 +35,7 @@ class PortfolioController extends AbstractController
 
 
   );
+
 
   }
 
@@ -61,7 +63,7 @@ class PortfolioController extends AbstractController
 
         if(move_uploaded_file($file_tmp_name,$file_destination)){
 
-          echo 'image uploadée ';
+        $picture = 'image uploadée ';
 
         }
       }
@@ -71,6 +73,7 @@ class PortfolioController extends AbstractController
       }
 
       $_POST['picture'] = $fileName;
+
 
 
       $Portfolio = $PortfolioManager->insert($_POST);
@@ -112,6 +115,7 @@ class PortfolioController extends AbstractController
     else{
       return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
+
     }}
 
   else {
@@ -119,3 +123,4 @@ class PortfolioController extends AbstractController
   }
 
 }}
+
