@@ -1,29 +1,61 @@
 <!doctype html>
 <html lang="fr">
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-	integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{% block title %}{% endblock %}</title>
+  <!-- Latest compiled and minified CSS -->
+  <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
-	<link rel="stylesheet" href="/assets/css/styles.css">
-	<link rel="stylesheet" href="/assets/css/contact.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	{% block stylesheet %}{% endblock %}
-	<link rel="icon" href="/assets/images/favicon.png">
+    <title>{% block title %}{% endblock %}</title>
+
+
+
+      	<link rel="stylesheet" href="/assets/css/style2.css"> <!--menude navigation et bar de nav-->
+        <link rel="stylesheet" href="/assets/css/reset.css"> <!-- CSS reset  bar de nav -->
+        <link rel="stylesheet" href="/assets/css/styles.css"><!-- bar de nav -->
+
+
+    {% block stylesheet %}
+
+
+
+
+    {% endblock %}
+    <link rel="icon" href="/assets/images/favicon.png">
 </head>
 
 <body>
-	<div class="container">
-		{% block content %}{% endblock %}
-	</div>
+  <header class="cd-header">
+    <div id="cd-logo"><a href="http://localhost:8000/contact">Contact</a></div>
+    <a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="http://localhost:8000"><span>Accueil</span></a></li>
+      <li><a href="http://localhost:8000/portfolio"><span>Portfolio</span></a></li>
+      <li><a href="http://localhost:8000/contact"><span>Contact</span></a></li>
+      <li><a href="http://localhost:8000/login"><span>Administration</span></a></li>
+    
+    </ul>
+    <a href="#0" class="cd-close-menu">Close<span></span></a>
+  </nav>
+{% block content %}
+
+
+
+{% endblock %}
+
 </body>
 {% block javascript %}
 <!-- Latest compiled and minified CSS -->
