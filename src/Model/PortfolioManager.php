@@ -1,4 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: sylvain
+ * Date: 07/03/18
+ * Time: 18:20
+ * PHP version 7
+ */
+
 namespace Model;
 
 /**
@@ -32,7 +40,7 @@ class PortfolioManager extends AbstractManager
     $add = 'INSERT INTO '.$this->table.'(link, description, id_categories)
     VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
 
-
+    
     $statement = $this->pdoConnection->prepare($add);
     $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
     $statement->bindValue('link', $picture, \PDO::PARAM_INT);
@@ -61,6 +69,47 @@ class PortfolioManager extends AbstractManager
 
     }
 
+//   public function selectVitrine()
+//   {
+//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
+//       FROM ' . $this->table. '
+//       WHERE id_categories = 1
+//       ORDER BY Portfolio.id DESC',
+//       \PDO::FETCH_CLASS,
+//       $this->className)->fetchAll();
+
+//     }
+
+//     public function selectEcommerce()
+//   {
+//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
+//       FROM ' . $this->table. '
+//       WHERE id_categories = 3
+//       ORDER BY Portfolio.id DESC',
+//       \PDO::FETCH_CLASS,
+//       $this->className)->fetchAll();
+//   }
+
+//   public function selectGestionDeStock()
+//   {
+//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories
+//       FROM ' . $this->table. '
+//       WHERE id_categories = 4
+//       ORDER BY Portfolio.id DESC',
+//       \PDO::FETCH_CLASS,
+//       $this->className)->fetchAll();
+// }
+
+
+//     public function selectRefonte()
+//   {
+//     return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
+//       FROM ' . $this->table. ' JOIN categories ON id_categories = 2
+//       ORDER BY Portfolio.id DESC',
+//       \PDO::FETCH_CLASS,
+//       $this->className)->fetchAll();
+
+//     }
 
     /**
     * @param int   $id   Id of the row to update
@@ -75,7 +124,7 @@ class PortfolioManager extends AbstractManager
       $id = $data['id'];
 
 
-      
+
       $request = "UPDATE $this->table
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;

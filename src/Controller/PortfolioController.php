@@ -21,12 +21,29 @@ class PortfolioController extends AbstractController
   public function index()
   {
     $portfolioManager = new PortfolioManager();
-    $portfolio = $portfolioManager->selectAll();
-    return $this->twig->render('Portfolio/index.html.twig', ['portfolio' => $portfolio]);
+    $portfolio = $portfolioManager->selectAllPerso();
+    // $vitrine = $portfolioManager->selectVitrine();
+
+
+
+    return $this->twig->render('Portfolio/index.html.twig',
+     ['portfolio' => $portfolio,
+
+
+    ]
+
+
+  );
+
   }
 
   public function adminCreate()
   {
+
+    session_start();
+
+        if(isset($_SESSION['login']) and isset($_SESSION['password'])){
+
     if(!empty($_POST) and !empty($_FILES)){
       $PortfolioManager = new PortfolioManager();
 
@@ -37,7 +54,7 @@ class PortfolioController extends AbstractController
       $fileextension = strrchr($fileName,'.');
       $sizefile = $_FILES['picture']['size'];
 
-      $extension= ['.jpg','.png'];
+      $extension= ['.jpg','.png','.jpeg','.JPEG','.PNG','.JPG'];
 
       if(in_array($fileextension,$extension)){
 
@@ -53,7 +70,7 @@ class PortfolioController extends AbstractController
         echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
       }
 
-      $_POST['picture'] =  $file_destination;
+      $_POST['picture'] = $fileName;
 
 
       $Portfolio = $PortfolioManager->insert($_POST);
@@ -66,6 +83,9 @@ class PortfolioController extends AbstractController
 
       return $this->twig->render('Portfolio/adminCreate.html.twig');
 
+    }}
+    else {
+      return $this->twig->render('tetraDigital/login.html.twig');
     }
 
 
@@ -73,7 +93,9 @@ class PortfolioController extends AbstractController
 
   public function adminChange(){
 
+    session_start();
 
+        if(isset($_SESSION['login']) and isset($_SESSION['password'])){
     $portfolioManager = new PortfolioManager();
     $portfolio = $portfolioManager->selectAllPerso();
 
@@ -90,43 +112,10 @@ class PortfolioController extends AbstractController
     else{
       return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
 
-    }
+    }}
+
+  else {
+        return $this->twig->render('tetraDigital/login.html.twig');
   }
 
-
-  /**
-  * Display Portfolio informations specified by $id
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio edition page specified by $id
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio creation page
-  *
-  * @return string
-  */
-
-
-  /**
-  * Display Portfolio delete page
-  *
-  * @param  int $id
-  *
-  * @return string
-  */
-
-
-
-}
+}}
