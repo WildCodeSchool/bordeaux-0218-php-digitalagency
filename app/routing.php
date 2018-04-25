@@ -29,7 +29,9 @@ $routes = [
 ],
 'tetraDigital' => [ // Controller
     ['tetradigital', '/', 'GET'],
-    ['login', '/login', ['GET','POST']]
+    ['login', '/login', ['GET','POST']],
+    ['storytelling', '/storytelling','GET']
+
 
   ],
 

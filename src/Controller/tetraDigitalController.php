@@ -32,10 +32,21 @@ class tetraDigitalController extends AbstractController
   public function login()
   {
 
-
-
-
     return $this->twig->render('tetraDigital/login.html.twig');
   }
+
+
+
+
+
+    public function storyTelling()
+    {
+
+      return $this->twig->render('tetraDigital/storytelling.html.twig');
+    }
+
+
+
+
 
   }
