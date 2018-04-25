@@ -1,0 +1,43 @@
+body
+{
+  background-color: #42f4d9 ;
+}
+
+.img-thumbnail {
+    margin: 0 auto;
+    display: block;
+    height: 450px;
+}
+
+.container-fluid
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p
+{
+  text-align: center;
+  padding:5%;
+  margin:2%;
+  width: 95%;
+}
+
+h3
+{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.img-thumbnail{  margin: 0 auto;
+  display: block;
+}
+
+.thumbnail:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}

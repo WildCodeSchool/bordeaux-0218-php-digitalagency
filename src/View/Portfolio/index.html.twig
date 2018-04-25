@@ -1,12 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-
-
-<link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
-
-
-
+  <link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
 {% endblock %}
 
 {% block content %}
@@ -51,11 +46,10 @@ crossorigin="anonymous"></script>
 
     <script src="assets/js/portfolio.js"> </script>
   {% endblock %}
-{% endblock %}
 
 {% block content %}
 <div id="Portfolio">
-  
+
 <h1 style="margin-top: 50px;" class="text-center mb-5"><strong>PORTFOLIO DE L'AGENCE DIGITALE</strong></h1>
 <h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins. Prenez quelques minutes pour découvrir nos réalisations !!</h3>
 
@@ -65,8 +59,8 @@ crossorigin="anonymous"></script>
     <button class="btn color-btn fil-cat" data-rel="e-commerce">E-COMMERCE</button>
     <button class="btn color-btn fil-cat" data-rel="gestionDeStock">GESTION DE STOCK</button>
     <button class="btn color-btn fil-cat" data-rel="refonte">REFONTE</button>
-  </div> 
- 
+  </div>
+
   <div id="portfolio">
       {% for pf in portfolio %}
         <div class="tile scale-anm web all {{ pf.namecategories }}">
@@ -74,10 +68,10 @@ crossorigin="anonymous"></script>
         </div>
       {% endfor %}
 
-   
+
 </div>
 
-<div style="clear:both;"></div>  
+<div style="clear:both;"></div>
 
 
 </div>
