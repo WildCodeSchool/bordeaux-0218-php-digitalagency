@@ -4,9 +4,9 @@
  *
  * PHP version 7
  *
- * @author   WCS <contact@wildcodeschool.fr>
+ * @author WCS <contact@wildcodeschool.fr>
  *
- * @link     https://github.com/WildCodeSchool/simple-mvc
+ * @link https://github.com/WildCodeSchool/simple-mvc
  */
 
 $routes = [
@@ -18,23 +18,23 @@ $routes = [
         ['contact', '/contact', ['POST', 'GET']],
         ['entreprise', '/entreprise', 'GET'],
         ['blog', '/blog', 'GET']
-],
+    ],
 
-'Portfolio' => [ // Controller
+    'Portfolio' => [ // Controller
     ['index', '/portfolio', 'GET'],
     ['adminCreate', '/portfolio/create', ['GET','POST']], // action, url, method
     ['adminChange', '/portfolio/change', ['GET','POST']],
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
 
-],
-'tetraDigital' => [ // Controller
+    ],
+    'tetraDigital' => [ // Controller
     ['tetradigital', '/', 'GET'],
     ['login', '/login', ['GET','POST']],
     ['storytelling', '/storytelling','GET'],
     ['adminstorytelling', '/adminstorytelling',['GET','POST']]
 
 
-  ],
+    ],
 
 
 ];
