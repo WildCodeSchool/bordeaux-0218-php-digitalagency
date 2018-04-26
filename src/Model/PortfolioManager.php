@@ -66,10 +66,10 @@ class PortfolioManager extends AbstractManager
 
 
 
-  {
+  }
 
 
-    }
+
 
 
     public function selectAllPerso()
@@ -84,7 +84,7 @@ class PortfolioManager extends AbstractManager
         ORDER BY Portfolio.id DESC',
 
             \PDO::FETCH_CLASS,
-            $this->className,
+            $this->className
         )->fetchAll();
 
     }
@@ -122,7 +122,7 @@ class PortfolioManager extends AbstractManager
         $statement->execute();
 
     }
-  }
+
 
 
 
