@@ -40,7 +40,8 @@ class PortfolioManager extends AbstractManager
         $add = 'INSERT INTO '.$this->table.'(link, description, id_categories)
     VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
 
-<<<<<<< HEAD
+
+
 
         $statement = $this->pdoConnection->prepare($add);
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
@@ -48,15 +49,10 @@ class PortfolioManager extends AbstractManager
         $statement->bindValue('description', $description, \PDO::PARAM_INT);
         $statement->bindValue('id_categories', $categories, \PDO::PARAM_INT);
         $statement->execute();
-=======
-    
-    $statement = $this->pdoConnection->prepare($add);
-    $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
-    $statement->bindValue('link', $picture, \PDO::PARAM_INT);
-    $statement->bindValue('description', $description, \PDO::PARAM_INT);
-    $statement->bindValue('id_categories', $categories, \PDO::PARAM_INT);
-    $statement->execute();
->>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
+
+
+
+
 
     }
 
@@ -64,28 +60,31 @@ class PortfolioManager extends AbstractManager
 
 
     public function update(int $id, array $data)
-<<<<<<< HEAD
+
+
     {
-=======
+
+
+
   {
->>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
+
 
     }
 
 
     public function selectAllPerso()
-<<<<<<< HEAD
+
     {
-        return $this->pdoConnection->query(
-            'SELECT Portfolio.id, link, description, id_categories, namecategories
-=======
-  {
-    return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
->>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
-      FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
-      ORDER BY Portfolio.id DESC',
+
+
+      return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
+
+        FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
+
+        ORDER BY Portfolio.id DESC',
+
             \PDO::FETCH_CLASS,
-            $this->className
+            $this->className,
         )->fetchAll();
 
     }
@@ -105,13 +104,12 @@ class PortfolioManager extends AbstractManager
         $id = $data['id'];
 
 
-<<<<<<< HEAD
-      
-        $request = "UPDATE $this->table
-=======
+
+
+
 
       $request = "UPDATE $this->table
->>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
+
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;
 
@@ -129,7 +127,6 @@ class PortfolioManager extends AbstractManager
 
 
 
-<<<<<<< HEAD
+
+
 }
-=======
->>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
