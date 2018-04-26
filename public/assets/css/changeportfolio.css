@@ -20,3 +20,15 @@ label{
   width: 300px;
   display: block;
 }
+
+
+.badge-dark{
+  font-size: 1.5em;
+}
+.porfolio{
+  float: left;
+
+}
+.story{
+  float: right;
+}

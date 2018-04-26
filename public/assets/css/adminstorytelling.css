@@ -13,3 +13,15 @@ body{
   -moz-transition: background 0.2s;
   transition: background 0.2s;
 }
+
+
+.badge-dark{
+  font-size: 1.5em;
+}
+.porfolio{
+  float: left;
+
+}
+.story{
+  float: right;
+}
