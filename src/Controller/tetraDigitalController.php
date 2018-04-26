@@ -28,8 +28,18 @@ class tetraDigitalController extends AbstractController
     }
 
 
+<<<<<<< HEAD
     public function login()
     {
+=======
+  public function login()
+  { session_start();
+
+      if(isset($_POST['login']) and isset($_POST['password'])){
+        
+        
+
+>>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
 
         return $this->twig->render('tetraDigital/login.html.twig');
     }
@@ -50,6 +60,7 @@ class tetraDigitalController extends AbstractController
 
         $lecture = file_get_contents($file);
 
+<<<<<<< HEAD
         if (isset($_POST['changeStory'])) {
             var_dump($_POST['changeStory']);
             $readFile = fopen($file, "w");
@@ -57,6 +68,15 @@ class tetraDigitalController extends AbstractController
             fclose($readFile);
             header('location: http://localhost:8000/adminstorytelling ');
         }
+=======
+          if (isset($_POST['changeStory'])) {
+            
+            $readFile = fopen($file,"w");
+             fwrite($readFile,$_POST['changeStory']);
+             fclose($readFile);
+             header('location: http://localhost:8000/adminstorytelling ');
+          }
+>>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
 
 
 
@@ -66,7 +86,25 @@ class tetraDigitalController extends AbstractController
     }
 
 
+        $_SESSION['login'] = $_POST['login'];
+        $_SESSION['password'] = $_POST['password'];
+
+
+        if($_POST['login'] == "admin" and $_POST['password'] == "azerty"){
 
 
 
+<<<<<<< HEAD
 }
+=======
+        return $this->twig->render('Portfolio/adminCreate.html.twig');
+      }
+      }
+      else{
+    return $this->twig->render('tetraDigital/login.html.twig');
+          }
+  }
+
+
+  }
+>>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750

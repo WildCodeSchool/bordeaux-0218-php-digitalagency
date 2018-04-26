@@ -14,6 +14,7 @@ namespace Model;
  */
 class Portfolio
 {
+<<<<<<< HEAD
     private $id;
     private $link;
     private $description;
@@ -84,3 +85,76 @@ class Portfolio
 
 
 }
+=======
+  private $id;
+  private $link;
+  private $description;
+  private $id_categories;
+
+  /**
+  * @return int
+  */
+  public function getId(): int
+  {
+    return $this->id;
+  }
+
+  /**
+  * @param mixed $id
+  *
+  * @return Portfolio
+  */
+  public function setId($id): Portfolio
+  {
+    $this->id = $id;
+
+    return $this;
+  }
+
+  /**
+  * @return mixed
+  */
+  public function getLink(): string
+  {
+    return $this->link;
+  }
+
+  
+  /**
+  * @param mixed $title
+  *
+  * @return Portfolio
+  */
+  public function setLink($link):Portfolio
+  {
+    $this->link = $link;
+
+    return $this;
+  }
+
+
+
+  public function getDescription(): string
+  {
+    return $this->description;
+  }
+
+  public function setDescription($description):Portfolio
+  {
+    $this->description = $description;
+
+    return $this;
+  }
+
+  public function getid_categories(): string
+  {
+    return $this->id_categories;
+  }
+
+  public function setid_categories(): string
+  {
+    return $this->id_categories = $id_categories;
+  }
+
+  }
+>>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
