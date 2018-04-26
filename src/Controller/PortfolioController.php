@@ -16,14 +16,7 @@ use Model\PortfolioManager;
  */
 class PortfolioController extends AbstractController
 {
-<<<<<<< HEAD
-    public function index()
-    {
-        $portfolioManager = new PortfolioManager();
-        $portfolio = $portfolioManager->selectAll();
-        return $this->twig->render('Portfolio/index.html.twig', ['portfolio' => $portfolio]);
-    }
-=======
+
   public function index()
   {
     $portfolioManager = new PortfolioManager();
@@ -79,12 +72,12 @@ class PortfolioController extends AbstractController
 
             $fileName= $_FILES['picture']['name'];
 
-<<<<<<< HEAD
+
             $file_tmp_name = $_FILES['picture']['tmp_name'];
             $file_destination = '../public/assets/images/'.$fileName;
             $fileextension = strrchr($fileName, '.');
             $sizefile = $_FILES['picture']['size'];
-=======
+
       $_POST['picture'] = $fileName;
 
 >>>>>>> e1e7f02864ad7946c1c78b0dbd26aef799d63750
