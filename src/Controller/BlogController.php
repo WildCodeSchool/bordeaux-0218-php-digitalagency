@@ -28,8 +28,9 @@ class BlogController extends AbstractController
   */
   public function index()
   {
-    $articleManager = new ArticleManager();
-    $articles = $articleManager->selectAll();
+    $BlogManager = new BlogManager();
+    $articles = $BlogManager->selectAll();
+  
 
     return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
   }

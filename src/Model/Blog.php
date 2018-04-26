@@ -10,10 +10,10 @@
 namespace Model;
 
 /**
- * Class Article
+ * Class Blog
  *
  */
-class Article
+class Blog
 {
     private $id;
     private $publication_date;
@@ -35,9 +35,9 @@ class Article
     /**
      * @param mixed $id
      *
-     * @return Article
+     * @return Blog
      */
-    public function setId($id): Article
+    public function setId($id): Blog
     {
         $this->id = $id;
 
@@ -55,9 +55,9 @@ class Article
     /**
      * @param mixed $title
      *
-     * @return Article
+     * @return Blog
      */
-    public function setTitle($title):Article
+    public function setTitle($title):Blog
     {
         $this->title = $title;
 
@@ -74,9 +74,9 @@ class Article
     /**
      * @param mixed $title
      *
-     * @return Article
+     * @return Blog
      */
-    public function setPublicationDate($publication_date):Article
+    public function setPublicationDate($publication_date):Blog
     {
         $this->publication_date = $publication_date;
 
@@ -93,9 +93,9 @@ class Article
     /**
      * @param mixed $title
      *
-     * @return Article
+     * @return Blog
      */
-    public function setWritingDate($writing_date):Article
+    public function setWritingDate($writing_date):Blog
     {
         $this->writing_date= $writing_date;
 
@@ -112,9 +112,9 @@ class Article
     /**
     * @param mixed $title
     *
-    * @return Article
+    * @return Blog
     */
-    public function setAuthor($author):Article
+    public function setAuthor($author):Blog
     {
       $this->author= $author;
 
@@ -131,11 +131,11 @@ class Article
     /**
     * @param mixed $title
     *
-    * @return Article
+    * @return Blog
     */
-    public function setContent($content):Article
+    public function setContent($content):Blog
     {
-      $this->= $content;
+      $this->content = $content;
 
       return $this;
     }
@@ -150,11 +150,11 @@ class Article
     /**
     * @param mixed $title
     *
-    * @return Article
+    * @return Blog
     */
-    public function setThumbnails($thumbnails):Article
+    public function setThumbnails($thumbnails):Blog
     {
-      $this->= $thumbnails;
+      $this->thumbnails = $thumbnails;
 
       return $this;
     }
