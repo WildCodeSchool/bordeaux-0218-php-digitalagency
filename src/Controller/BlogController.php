@@ -11,7 +11,6 @@ namespace Controller;
 
 use Model\BlogManager;
 
-
 /**
 * Class BlogController
 *
@@ -26,13 +25,13 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-  public function index()
-  {
-    $articleManager = new ArticleManager();
-    $articles = $articleManager->selectAll();
+    public function index()
+    {
+        $articleManager = new ArticleManager();
+        $articles = $articleManager->selectAll();
 
-    return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
-  }
+        return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
+    }
 
   /**
   * Display blog informations specified by $id
@@ -41,13 +40,13 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-  public function show(int $id)
-  {
-    $blogManager = new BlogManager();
-    $blog = $blogManager->selectOneById($id);
+    public function show(int $id)
+    {
+        $blogManager = new BlogManager();
+        $blog = $blogManager->selectOneById($id);
 
-    return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
-  }
+        return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
+    }
 
   /**
   * Display blog edition page specified by $id
@@ -56,22 +55,22 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-  public function edit(int $id)
-  {
-    // TODO : edit blog with id $id
-    return $this->twig->render('Blog/edit.html.twig', ['blog', $id]);
-  }
+    public function edit(int $id)
+    {
+      // TODO : edit blog with id $id
+        return $this->twig->render('Blog/edit.html.twig', ['blog', $id]);
+    }
 
   /**
   * Display blog creation page
   *
   * @return string
   */
-  public function add()
-  {
-    // TODO : add a new blog
-    return $this->twig->render('Blog/add.html.twig');
-  }
+    public function add()
+    {
+      // TODO : add a new blog
+        return $this->twig->render('Blog/add.html.twig');
+    }
 
   /**
   * Display blog delete page
@@ -80,10 +79,9 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-  public function delete(int $id)
-  {
-    // TODO : delete the blog with id $id
-    return $this->twig->render('Blog/index.html.twig');
-  }
-
+    public function delete(int $id)
+    {
+      // TODO : delete the blog with id $id
+        return $this->twig->render('Blog/index.html.twig');
+    }
 }

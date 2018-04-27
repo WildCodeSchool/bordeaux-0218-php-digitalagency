@@ -82,6 +82,4 @@ class Portfolio
 
         return $this;
     }
-
-
 }

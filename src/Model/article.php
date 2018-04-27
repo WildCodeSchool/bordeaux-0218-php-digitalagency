@@ -15,148 +15,147 @@ namespace Model;
 */
 class Article
 {
-  private $id;
-  private $publication_date;
-  private $writing_date;
-  private $title;
-  private $author;
-  private $content;
-  private $thumbnails;
+    private $id;
+    private $publication_date;
+    private $writing_date;
+    private $title;
+    private $author;
+    private $content;
+    private $thumbnails;
 
 
   /**
   * @return int
   */
-  public function getId(): int
-  {
-    return $this->id;
-  }
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
   /**
   * @param mixed $id
   *
   * @return Article
   */
-  public function setId($id): Article
-  {
-    $this->id = $id;
+    public function setId($id): Article
+    {
+        $this->id = $id;
 
-    return $this;
-  }
+        return $this;
+    }
 
   /**
   * @return mixed
   */
-  public function getTitle(): string
-  {
-    return $this->title;
-  }
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setTitle($title):Article
-  {
-    $this->title = $title;
+    public function setTitle($title):Article
+    {
+        $this->title = $title;
 
-    return $this;
-  }
+        return $this;
+    }
   /**
   * @return mixed
   */
-  public function getPublicationDate(): string
-  {
-    return $this->publication_date;
-  }
+    public function getPublicationDate(): string
+    {
+        return $this->publication_date;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setPublicationDate($publication_date):Article
-  {
-    $this->publication_date = $publication_date;
+    public function setPublicationDate($publication_date):Article
+    {
+        $this->publication_date = $publication_date;
 
-    return $this;
-  }
+        return $this;
+    }
   /**
   * @return mixed
   */
-  public function getWritingDate(): string
-  {
-    return $this->writing_date;
-  }
+    public function getWritingDate(): string
+    {
+        return $this->writing_date;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setWritingDate($writing_date):Article
-  {
-    $this->writing_date= $writing_date;
+    public function setWritingDate($writing_date):Article
+    {
+        $this->writing_date= $writing_date;
 
-    return $this;
-  }
+        return $this;
+    }
   /**
   * @return mixed
   */
-  public function getAuthor(): string
-  {
-    return $this->author;
-  }
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setAuthor($author):Article
-  {
-    $this->author= $author;
+    public function setAuthor($author):Article
+    {
+        $this->author= $author;
 
-    return $this;
-  }
+        return $this;
+    }
   /**
   * @return mixed
   */
-  public function getContent(): string
-  {
-    return $this->content;
-  }
+    public function getContent(): string
+    {
+        return $this->content;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setContent($content):Article
-  {
-    $this->= $content;
+    public function setContent($content):Article
+    {
+        $this->= $content;
 
-    return $this;
-  }
+        return $this;
+    }
   /**
   * @return mixed
   */
-  public function getThumbnails(): string
-  {
-    return $this->thumbnails;
-  }
+    public function getThumbnails(): string
+    {
+        return $this->thumbnails;
+    }
 
   /**
   * @param mixed $title
   *
   * @return Article
   */
-  public function setThumbnails($thumbnails):Article
-  {
-    $this->= $thumbnails;
+    public function setThumbnails($thumbnails):Article
+    {
+        $this->= $thumbnails;
 
-    return $this;
-  }
-
+        return $this;
+    }
 }

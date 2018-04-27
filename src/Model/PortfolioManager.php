@@ -26,7 +26,6 @@ class PortfolioManager extends AbstractManager
 
     public function delete(int $id)
     {
-
     }
 
 
@@ -49,44 +48,32 @@ class PortfolioManager extends AbstractManager
         $statement->bindValue('description', $description, \PDO::PARAM_INT);
         $statement->bindValue('id_categories', $categories, \PDO::PARAM_INT);
         $statement->execute();
-
-
-
-
-
     }
 
 
 
 
     public function update(int $id, array $data)
-
-
     {
-
-
-
-  }
+    }
 
 
 
 
 
     public function selectAllPerso()
-
     {
 
 
-      return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
+        return $this->pdoConnection->query(
+            'SELECT Portfolio.id, link, description, id_categories, namecategories
 
         FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
 
         ORDER BY Portfolio.id DESC',
-
             \PDO::FETCH_CLASS,
             $this->className
         )->fetchAll();
-
     }
 
 
@@ -108,7 +95,7 @@ class PortfolioManager extends AbstractManager
 
 
 
-      $request = "UPDATE $this->table
+        $request = "UPDATE $this->table
 
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;
@@ -120,13 +107,5 @@ class PortfolioManager extends AbstractManager
         $statement->bindValue($id, $id, \PDO::PARAM_INT);
         $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
         $statement->execute();
-
     }
-
-
-
-
-
-
-
 }
