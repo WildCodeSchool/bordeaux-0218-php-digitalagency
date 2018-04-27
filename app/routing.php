@@ -10,13 +10,7 @@
  */
 
 $routes = [
-    'Item' => [ // Controller
 
-        ['add', '/item/add', 'GET'], // action, url, method
-        ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
-        ['show', '/item/{id:\d+}', 'GET'], // action, url, method
-        ['contact', '/contact', ['POST', 'GET']],
-    ],
 
     'Portfolio' => [ // Controller
     ['index', '/portfolio', 'GET'],
@@ -32,10 +26,11 @@ $routes = [
     ['chantier', '/blog/article/{id:\d+}', 'GET'], // action, url, method
     ],
 
-    'tetraDigital' => [ // Controller
+    'TetraDigital' => [ // Controller
     ['tetraDigital', '/', 'GET'],
     ['login', '/login', ['GET','POST']],
     ['storyTelling', '/storytelling','GET'],
+    ['contact', '/contact', ['POST', 'GET']],
     ['adminStoryTelling', '/adminstorytelling',['GET','POST']]
 
 

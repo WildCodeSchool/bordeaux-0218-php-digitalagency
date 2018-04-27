@@ -38,6 +38,11 @@ class PortfolioController extends AbstractController
 
     public function adminCreate()
     {
+
+        if (!isset($_SESSION['login']) and !isset($_SESSION['password'])) {
+            header('location:/login');
+        }
+
         if (!empty($_POST) and !empty($_FILES)) {
             $PortfolioManager = new PortfolioManager();
 
@@ -74,7 +79,10 @@ class PortfolioController extends AbstractController
 
     public function adminChange()
     {
-
+        if (!isset($_SESSION['login']) and !isset($_SESSION['password'])) {
+            header('location:/login');
+            ;
+        }
 
         $portfolioManager = new PortfolioManager();
         $portfolio = $portfolioManager->selectAllPerso();
