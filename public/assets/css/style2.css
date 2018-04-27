@@ -29,6 +29,12 @@ a {
   color: white;
   text-decoration: none;
 }
+.nav:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #CECECE;
+}
+
 
 /* --------------------------------
 

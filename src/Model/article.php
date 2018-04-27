@@ -1,18 +1,18 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: wcs
- * Date: 23/10/17
- * Time: 10:57
- * PHP version 7
- */
+* Created by PhpStorm.
+* User: wcs
+* Date: 23/10/17
+* Time: 10:57
+* PHP version 7
+*/
 
 namespace Model;
 
 /**
- * Class Article
- *
- */
+* Class Article
+*
+*/
 class Article
 {
     private $id;
@@ -24,19 +24,19 @@ class Article
     private $thumbnails;
 
 
-    /**
-     * @return int
-     */
+  /**
+  * @return int
+  */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $id
+  *
+  * @return Article
+  */
     public function setId($id): Article
     {
         $this->id = $id;
@@ -44,119 +44,118 @@ class Article
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+  /**
+  * @return mixed
+  */
     public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @param mixed $title
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setTitle($title):Article
     {
         $this->title = $title;
 
         return $this;
     }
-    /**
-     * @return mixed
-     */
+  /**
+  * @return mixed
+  */
     public function getPublicationDate(): string
     {
         return $this->publication_date;
     }
 
-    /**
-     * @param mixed $title
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setPublicationDate($publication_date):Article
     {
         $this->publication_date = $publication_date;
 
         return $this;
     }
-    /**
-     * @return mixed
-     */
+  /**
+  * @return mixed
+  */
     public function getWritingDate(): string
     {
         return $this->writing_date;
     }
 
-    /**
-     * @param mixed $title
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setWritingDate($writing_date):Article
     {
         $this->writing_date= $writing_date;
 
         return $this;
     }
-    /**
-    * @return mixed
-    */
+  /**
+  * @return mixed
+  */
     public function getAuthor(): string
     {
-      return $this->author;
+        return $this->author;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setAuthor($author):Article
     {
-      $this->author= $author;
+        $this->author= $author;
 
-      return $this;
+        return $this;
     }
-    /**
-    * @return mixed
-    */
+  /**
+  * @return mixed
+  */
     public function getContent(): string
     {
-      return $this->content;
+        return $this->content;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setContent($content):Article
     {
-      $this->= $content;
+        $this->= $content;
 
-      return $this;
+        return $this;
     }
-    /**
-    * @return mixed
-    */
+  /**
+  * @return mixed
+  */
     public function getThumbnails(): string
     {
-      return $this->thumbnails;
+        return $this->thumbnails;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setThumbnails($thumbnails):Article
     {
-      $this->= $thumbnails;
+        $this->= $thumbnails;
 
-      return $this;
+        return $this;
     }
-
 }

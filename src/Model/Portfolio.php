@@ -1,20 +1,20 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: wcs
- * Date: 23/10/17
- * Time: 10:57
- * PHP version 7
- */
+* Created by PhpStorm.
+* User: wcs
+* Date: 23/10/17
+* Time: 10:57
+* PHP version 7
+*/
 
 namespace Model;
 
 /**
 * Class Portfolio
-*
 */
 class Portfolio
 {
+
   private $id;
   private $link;
   private $description;
@@ -48,21 +48,6 @@ class Portfolio
     return $this->link;
   }
 
-  
-  /**
-  * @param mixed $title
-  *
-  * @return Portfolio
-  */
-  public function setLink($link):Portfolio
-  {
-    $this->link = $link;
-
-    return $this;
-  }
-
-
-
   public function getDescription(): string
   {
     return $this->description;
@@ -85,4 +70,16 @@ class Portfolio
     return $this->id_categories = $id_categories;
   }
 
+
+  /**
+  * @param mixed $title
+  *
+  * @return Portfolio
+  */
+  public function setLink($link):Portfolio
+  {
+    $this->link = $link;
+
+    return $this;
   }
+}
