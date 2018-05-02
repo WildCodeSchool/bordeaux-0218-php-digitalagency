@@ -1,24 +1,25 @@
 {% extends 'layout.html.twig' %}
 {% block stylesheet%}
   <link rel="stylesheet" href="assets/css/blog.css">
-  {% endblock %}
-	{% block content %}
+{% endblock %}
 
+{% block content %}
 
-  
-  
-  {% for data in articles %}
-    <div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/assets/imagesBlog/{{data.thumbnails}}" alt="...">
-      <div class="caption">
-        <h3>{{data.title}}</h3>
-        <p>{{data.content}}</p>
-        <p><a href="{{data.link}}" class="btn btn-primary" role="button">Lire tous l'article</a></p>
+  <div class="row">
+    {% for data in articles %}
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail">
+          <img src="/assets/imagesBlog/{{data.thumbnails}}" alt="...">
+          <div class="caption">
+            <h3>{{data.title}}</h3>
+            <p>{{data.content}}</p>
+            <p>
+              <a href="{{data.link}}" class="btn btn-primary" role="button">Lire tout l'article</a>
+            </p>
+          </div>
+        </div>
       </div>
+    {% endfor %}
     </div>
-  </div>
-</div>
-{% endfor %}
+
 {% endblock %}
