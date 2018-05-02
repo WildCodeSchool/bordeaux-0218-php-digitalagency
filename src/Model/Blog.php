@@ -17,7 +17,7 @@ class Blog
 {
     private $id;
     private $publication_date;
-    private $writing_date;
+    private $link;
     private $title;
     private $author;
     private $content;
@@ -85,9 +85,9 @@ class Blog
     /**
      * @return mixed
      */
-    public function getWritingDate(): string
+    public function getlink(): string
     {
-        return $this->writing_date;
+        return $this->link;
     }
 
     /**
@@ -95,9 +95,9 @@ class Blog
      *
      * @return Blog
      */
-    public function setWritingDate($writing_date):Blog
+    public function setlink($link):Blog
     {
-        $this->writing_date= $writing_date;
+        $this->link= $link;
 
         return $this;
     }
