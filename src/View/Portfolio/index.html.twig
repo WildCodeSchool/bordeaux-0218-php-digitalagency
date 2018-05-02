@@ -21,7 +21,7 @@
   <div id="portfolio">
       {% for pf in portfolio %}
         <div class="tile scale-anm web all {{ pf.namecategories }}">
-          <img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/>
+          <a href="?id={{pf.id}}"><img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/></a>
         </div>
       {% endfor %}
 

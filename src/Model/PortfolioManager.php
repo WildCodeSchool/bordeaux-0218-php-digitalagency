@@ -76,36 +76,51 @@ class PortfolioManager extends AbstractManager
       )->fetchAll();
     }
 
-
-
-    /**
-    * @param int   $id   Id of the row to update
-    * @param array $data $data to update
-    */
-    public function updatePerso($data)
+    public function selectChantier($getId)
     {
 
-      $namepicture = $data['namepicture'];
-      $categories = $data['listecategories'];
-      $details= $data['details'];
-      $id = $data['id'];
+
+      return $this->pdoConnection->query(
+        'SELECT Portfolio.id, link, description, id_categories, namecategories
+
+        FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
+
+        WHERE Portfolio.id ='.$getId,
+        \PDO::FETCH_CLASS,
+        $this->className
+        )->fetchAll();
+      }
+
+
+
+      /**
+      * @param int   $id   Id of the row to update
+      * @param array $data $data to update
+      */
+      public function updatePerso($data)
+      {
+
+        $namepicture = $data['namepicture'];
+        $categories = $data['listecategories'];
+        $details= $data['details'];
+        $id = $data['id'];
 
 
 
 
 
 
-      $request = "UPDATE $this->table
+        $request = "UPDATE $this->table
 
-      SET description='$details' , link= '$namepicture', id_categories= '$categories'
-      WHERE id='$id'" ;
+        SET description='$details' , link= '$namepicture', id_categories= '$categories'
+        WHERE id='$id'" ;
 
-      $statement = $this->pdoConnection->prepare($request);
-      $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
-      $statement->bindValue($details, $details, \PDO::PARAM_STR);
-      $statement->bindValue($categories, $categories, \PDO::PARAM_INT);
-      $statement->bindValue($id, $id, \PDO::PARAM_INT);
-      $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
-      $statement->execute();
+        $statement = $this->pdoConnection->prepare($request);
+        $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
+        $statement->bindValue($details, $details, \PDO::PARAM_STR);
+        $statement->bindValue($categories, $categories, \PDO::PARAM_INT);
+        $statement->bindValue($id, $id, \PDO::PARAM_INT);
+        $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
+        $statement->execute();
+      }
     }
-  }
