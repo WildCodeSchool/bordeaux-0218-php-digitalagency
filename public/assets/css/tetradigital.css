@@ -2,6 +2,7 @@ body {
   position: relative;
   height: 100vh;
   background-image: radial-gradient( rgba(255, 220, 178, 0.7), rgba(145, 64, 0, 0.7));
+
 }
 
 .orbit {
@@ -117,5 +118,25 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+h1{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
   }
 }

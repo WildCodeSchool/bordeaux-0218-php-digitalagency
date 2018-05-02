@@ -52,9 +52,13 @@ h1{
 	font-size: 300%;
 }
 a{
-	 font-family: 'Kavivanar', cursive;
+	 font-family: 'Viola', cursive;
 
 }
 p{
 	font-family: 'KIONA', cursive;
+}
+h1{
+	font-family: 'Viola', cursive;
+	font-size: 2rem;
 }

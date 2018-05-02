@@ -1,13 +1,11 @@
 body{
-  background-color: #6DCCF8;
+  background-color: #CECECE;
 
 }
 
 
-h1, h2{
-  text-align: center;
 
-}
+
 
 .modifiCreation{
   width:40%;
@@ -48,4 +46,25 @@ label{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+h1{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom:40px;
+  padding-top: 15px;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+  }
 }

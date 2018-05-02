@@ -44,11 +44,11 @@ class PortfolioController extends AbstractController
         }
 
 
-        if(isset($_GET['deconnexion'])){
-          unset($_SESSION['login']);
-          unset($_SESSION['password']);
-          session_destroy();
-          header('location: /login');
+        if (isset($_GET['deconnexion'])) {
+            unset($_SESSION['login']);
+            unset($_SESSION['password']);
+            session_destroy();
+            header('location: /login');
         }
 
         if (!empty($_POST) and !empty($_FILES)) {
@@ -89,14 +89,13 @@ class PortfolioController extends AbstractController
     {
         if (!isset($_SESSION['login']) and !isset($_SESSION['password'])) {
             header('location:/login');
-
         }
 
-        if(isset($_GET['deconnexion'])){
-          unset($_SESSION['login']);
-          unset($_SESSION['password']);
-          session_destroy();
-          header('location: /login');
+        if (isset($_GET['deconnexion'])) {
+            unset($_SESSION['login']);
+            unset($_SESSION['password']);
+            session_destroy();
+            header('location: /login');
         }
 
         $portfolioManager = new PortfolioManager();
