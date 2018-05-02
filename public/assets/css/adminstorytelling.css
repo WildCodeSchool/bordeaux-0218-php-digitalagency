@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background-color: #6DCCF8;
 }
 .cd-header {
   position: relative;
@@ -18,10 +18,11 @@ body{
 .badge-dark{
   font-size: 1.5em;
 }
-.porfolio{
-  float: left;
 
-}
-.story{
-  float: right;
+
+.navadmin{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

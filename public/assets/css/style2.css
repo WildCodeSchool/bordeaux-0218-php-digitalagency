@@ -93,9 +93,23 @@ Main components
 #cd-intro {
   position: relative;
   height: 100%;
-  background: url("../images/bridge.jpg") no-repeat center center;
+/*  background: url("../images/bridge.jpg") no-repeat center center;*/
   background-size: cover;
 }
+
+@media screen and (max-width: 700px) {
+
+  #cd-intro {
+    position: relative;
+    height: 100%;
+    background: url("../images/bridge.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  }
+
+
+
 #cd-intro h1 {
   font-family: 'Orbitron', sans-serif;
   position: absolute;
@@ -410,4 +424,12 @@ Main components
 
 h1{
   font-size: 2em;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background-size: cover;
+
 }

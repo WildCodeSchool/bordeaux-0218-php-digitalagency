@@ -41,6 +41,14 @@ class TetraDigitalController extends AbstractController
         if (!isset($_SESSION['login']) and !isset($_SESSION['password'])) {
             header('location:/login');
         }
+
+
+        if(isset($_GET['deconnexion'])){
+          unset($_SESSION['login']);
+          unset($_SESSION['password']);
+          session_destroy();
+          header('location: /login');
+        }
         $file = "../src/View/tetraDigital/story.html.twig";
 
         $lecture = file_get_contents($file);
@@ -68,6 +76,14 @@ class TetraDigitalController extends AbstractController
             if ($_SESSION['login'] === "admin" and $_SESSION['password'] === "azerty") {
                 header('location:/portfolio/create');
             }
+              elseif($_SESSION['login'] != "admin" and $_SESSION['password'] != "azerty"){
+
+                $error = "Merci de vous indentifier correctement";
+                return $this->twig->render('tetraDigital/login.html.twig', ['error'=>$error]);
+
+              }
+
+
         } else {
             return $this->twig->render('tetraDigital/login.html.twig');
         }

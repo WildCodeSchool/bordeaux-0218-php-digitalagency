@@ -15,8 +15,3 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../app/db.php';
 require_once __DIR__ . '/../app/config.php';
 require_once __DIR__ . '/../app/dispatcher.php';
-
-if(isset($_GET['deconnexion'])){
-  session_destroy();
-  header('location: /login');
-}

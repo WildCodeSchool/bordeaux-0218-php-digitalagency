@@ -1,5 +1,5 @@
 body{
-  background-color: gray;
+  background-color: #6DCCF8;
 
 }
 
@@ -14,6 +14,8 @@ h1, h2{
   margin: 0 auto;
   display: block;
   background-color: white;
+  padding: 20px;
+
 }
 label{
   float: left;
@@ -24,6 +26,7 @@ label{
 
 .badge-dark{
   font-size: 1.5em;
+
 }
 .porfolio{
   float: left;
@@ -31,4 +34,18 @@ label{
 }
 .story{
   float: right;
+
+}
+.deconnexion
+{
+  float: right;
+
+
+
+}
+.navadmin{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

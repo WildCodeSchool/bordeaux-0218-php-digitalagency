@@ -10,10 +10,7 @@
 
 <h1> modifier vos creations</h1>
 
-<a href="/adminstorytelling" class="badge badge-dark story">Modifier mon historique</a>
-
-<a href="/portfolio/create" class="badge badge-dark portfolio">Renseigner mon nouveau chantier</a>
-
+{% include 'tetraDigital/navadmin.html.twig' %}
 {% for data in portfolio %}
 
 
@@ -43,7 +40,7 @@
 </div>
 <input type="submit" value="valider" name="validation">
 </form>
-<a href="?deconnexion=1" class="badge badge-dark story">Deconnexion</a>
+
 
 {% endfor%}
 
