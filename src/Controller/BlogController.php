@@ -40,12 +40,12 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-  public function show(int $id)
+  public function details($id)
   {
-    $blogManager = new ArticleManager();
-    $blog = $blogManager->selectOneById($id);
+    $articleManager = new ArticleManager();
+    $article = $articleManager->selectOneById($id);
 
-    return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
+    return $this->twig->render('Blog/show.html.twig', ['article' => $article]);
   }
 
   /**
@@ -93,15 +93,15 @@ class BlogController extends AbstractController
     return $this->twig->render('Blog/portfolio.html.twig', ['blogs' => $blogs]);
   }
 
+
+  /**
+   * @return string
+   * @throws \Twig_Error_Loader
+   * @throws \Twig_Error_Runtime
+   * @throws \Twig_Error_Syntax
+   */
   public function contact( )
-  {  /*
-  *
-  *
-  *
-  * Display blog listing
-  *
-  * @return string
-  */
+  {
 
     if(isset($_POST['nom']) and  isset($_POST['prenom']) and isset($_POST['telephone']) and isset($_POST['mail']))
     {
@@ -131,8 +131,8 @@ class BlogController extends AbstractController
 
         <body>
         <br><strong>nom:'.$nom.
-        '</strong><br><strong>prenom:'.$prenom.
-        '</strong><br><strong>telephone:'.$telephone.
+        '</strong><br><strong>prénom:'.$prenom.
+        '</strong><br><strong>téléphone:'.$telephone.
         '</strong><br><strong>mail: '.$email.
         '</strong><br> <p>'.$message.'</p>
 

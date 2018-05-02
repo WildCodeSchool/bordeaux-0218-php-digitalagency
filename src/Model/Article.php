@@ -37,7 +37,7 @@ class Article
      *
      * @return Article
      */
-    public function setId($id): Article
+    public function setId(int $id): Article
     {
         $this->id = $id;
 
@@ -95,9 +95,9 @@ class Article
      *
      * @return Article
      */
-    public function setWritingDate($writing_date):Article
+    public function link($link):Article
     {
-        $this->writing_date= $writing_date;
+        $this->link= $link;
 
         return $this;
     }
@@ -135,7 +135,7 @@ class Article
     */
     public function setContent($content):Article
     {
-      $this->= $content;
+      $this->content = $content;
 
       return $this;
     }
@@ -154,7 +154,7 @@ class Article
     */
     public function setThumbnails($thumbnails):Article
     {
-      $this->= $thumbnails;
+      $this->thumbnails = $thumbnails;
 
       return $this;
     }

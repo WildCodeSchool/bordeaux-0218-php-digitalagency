@@ -26,10 +26,8 @@ $routes = [
 ],
 
 'Blog' => [ // Controller
-    ['index', '/blog', 'GET'],
-    ['adminCreate', '/blog/create', ['GET','POST']], // action, url, method
-    ['adminChange', '/blog/change', ['GET','POST']],
-    ['chantier', '/blog/article/{id:\d+}', 'GET'], // action, url, method
+    ['details', '/blog/article/{id:\d+}', 'GET'],
+    ['edit', '/redact/blog/article/{id:\d+}', ['GET', 'POST']],
 ],
 
 'tetraDigital' => [ // Controller

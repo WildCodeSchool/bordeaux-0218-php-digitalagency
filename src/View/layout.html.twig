@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <base href="/">
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,11 +27,11 @@
 
   <nav id="main-nav">
     <ul>
-      <li><a href="http://localhost:8000"><span>Accueil</span></a></li>
-      <li><a href="http://localhost:8000/portfolio"><span>Portfolio</span></a></li>
-      <li><a href="http://localhost:8000/contact"><span>Contact</span></a></li>
-      <li><a href="http://localhost:8000/login"><span>Administration</span></a></li>
-    
+      <li><a href="/"><span>Accueil</span></a></li>
+      <li><a href="/portfolio"><span>Portfolio</span></a></li>
+      <li><a href="/contact"><span>Contact</span></a></li>
+      <li><a href="/login"><span>Administration</span></a></li>
+      <li><a href="/blog/article"><span>Around the World</span></a></li>
     </ul>
     <a href="#0" class="cd-close-menu">Close<span></span></a>
   </nav>
@@ -40,8 +39,8 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/js/modernizr.js"></script>
-  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="/assets/js/modernizr.js"></script>
+  <script type="text/javascript" src="/assets/js/main.js"></script>
   {% block javascript %}{% endblock %}
 </body>
 </html>

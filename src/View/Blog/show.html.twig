@@ -1,5 +1,16 @@
 {% extends 'layout.html.twig' %}
 {% block stylesheet %}
+  <link rel="stylesheet" href="assets/css/blog.css">
+{% endblock %}
+{% block content %}
 
+  <div id="main-content" class="blog-detail">
+    koukou
+
+    <h1>Article : {{ article.title }}</h1>
+    <h2>Author : {{ article.author }}</h2>
+    <p>Content : {{ article.content }}</p>
+    <h3>Published : {{ article.publication_date }}</h3>
+  </div>
 
 {% endblock %}
