@@ -10,13 +10,7 @@
 
 {% block content %}
 
-
-
-
-
-
-
-  <div class="container-fluid toto">
+<div class="container-fluid toto">
     <h2>L'entreprise</h2>
 
     <div class="grayscale colonne">
@@ -25,127 +19,51 @@
     <img src="/assets/images/AgencewebGeneve10.jpg" class="img-thumbnail image" alt="..." >
 
   </div>
+  <div class="fontStory">
+    {% include 'tetraDigital/story.html.twig' %}
   </div>
 </div>
-
-
-<div class="fontStory">
-
-
-
-  {% include 'tetraDigital/story.html.twig' %}
-
-</div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-
-
-      <div class="col-sm-2 col-md-3">
-
-
-
-        <div class="thumbnail">
-
-          <div class="morph colonne">
-            <div>
-              <div class="colonne">
-          <img src="http://via.placeholder.com/600x300" alt="...">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-3">
+      <div class="view view-seventh">
+        <img src="assets/images/vero.JPG" />
+        <div class="mask">
+          <h2>Véronique Discamps</h2>
+          <p>Développeur</p>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-          <div class="caption">
-            <h3>SomeOne</h3>
-            <p>Nom : DISCAMPS</p>
-            <p>Prenom : Véronique</p>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="col-sm-2 col-md-3">
-
-        <div class="thumbnail">
-
-
-          <div class="morph colonne">
-            <div>
-              <div class="colonne">
-          <img src="http://via.placeholder.com/350x150" alt="...">
+    <div class="col-sm-2 col-md-3">
+      <div class="view view-seventh">
+        <img  class="dimitri" src="assets/images/dimM.JPG" />
+        <div class="mask">
+          <h2>Dimitri MAC-LUCKIE</h2>
+          <p>Développeur</p>
         </div>
       </div>
     </div>
-
-
-
-          <div class="caption">
-            <h3>SomeOne</h3>
-            <p>Nom : DUPOUY</p>
-              <p>Prenom : Frédéric</p>
-          </div>
-        </div>
-
-
-
-
-      </div>
-      <div class="col-sm-2 col-md-3">
-        <div class="thumbnail">
-
-
-          <div class="morph colonne">
-            <div>
-              <div class="colonne">
-          <img src="http://via.placeholder.com/350x150" alt="...">
+    <div class="col-sm-2 col-md-3">
+      <div class="view view-seventh">
+        <img class="fred" src="assets/images/fredd.JPG" />
+        <div class="mask">
+          <h2>Frédéric DUPOUY</h2>
+          <p>Développeur</p>
         </div>
       </div>
     </div>
-
-
-
-          <div class="caption">
-            <h3>SomeOne</h3>
-              <p>Nom : MAC-LUCKIE</p>
-              <p>Prenom : Dimitri</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-2 col-md-3">
-        <div class="thumbnail">
-
-
-          <div class="morph colonne">
-            <div>
-              <div class="colonne">
-          <img src="http://via.placeholder.com/350x150" alt="...">
-        </div>
-      </div>
-    </div>
-
-
-          <div class="caption">
-            <h3>SomeOne</h3>
-              <p>Nom : MORMIN</p>
-              <p>Prenom : Kévin</p>
-          </div>
+    <div class="col-sm-2 col-md-3">
+      <div class="view view-seventh">
+        <img class="kevin" src="assets/images/kevM.JPG" />
+        <div class="mask">
+          <h2>Kévin MORMIN</h2>
+          <p>Développeur</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-</form>
-</body>
-</html>
+
+
 {% endblock %}
