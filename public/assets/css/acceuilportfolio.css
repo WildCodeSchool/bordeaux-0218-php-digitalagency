@@ -108,6 +108,26 @@ body{
       background-color: rgba(0, 0, 0, 0);
       font-family: 'Viola', cursive;
     }
+    @media screen and (max-width: 600px) {
+      .btn {
+        font-family: Lato;
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        padding: .5rem 1rem;
+        margin: 0;
+        height: auto;
+        border: 1px solid;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0);
+        font-family: 'Viola', cursive;
+      }
+    }
 
     .btn:hover {
       text-decoration: none;
@@ -141,6 +161,7 @@ h1{
     color: white;
     text-align: center;
   padding-top: 15px;
+  margin-left: 45px;
   }
 }
 

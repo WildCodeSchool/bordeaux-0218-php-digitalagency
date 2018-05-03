@@ -1,25 +1,22 @@
 body{
   background-color: #CECECE;
 
+
 }
 
 
-h1, h2{
+h2{
   text-align: center;
   color: black;
+  font-size: 1.5rem;
 
 }
 
 .badge-dark{
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  margin: 10px;
 }
-.porfolio{
-  float: left;
 
-}
-.story{
-  float: left;
-}
 
 .addCreation{
   width:40%;
@@ -29,12 +26,35 @@ h1, h2{
   padding: 50px;
   margin-top: 100px;
 }
+
+@media screen and (max-width: 600px) {
+
+  .addCreation{
+    width:90%;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    padding: 50px;
+    margin-top: 100px;
+  }
+
+}
 label{
   float: left;
   width: 300px;
   display: block;
+  font-size: 1.5rem;
+  color: black;
 }
 
+@media screen and (max-width: 600px) {
+
+  label{
+    float: left;
+    width: 300px;
+    display: block;
+    font-size: 1rem;
+  }
 
 
 .changeCreation{
@@ -46,19 +66,21 @@ label{
 }
 .navadmin{
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+
 }
+
+
 h1{
   font-size: 2rem;
   color: white;
   text-align: center;
   margin-bottom:40px;
   padding-top: 15px;
-
-
 }
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -68,5 +90,27 @@ h1{
     color: white;
     text-align: center;
     padding-top: 15px;
+    margin-left: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+.badge-dark{
+  font-size: 0.7rem;
+  width: 100%;
+
+}
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+
+  .navadmin{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+
   }
 }
