@@ -16,6 +16,7 @@ $routes = [
     ['index', '/portfolio', 'GET'],
     ['adminCreate', '/portfolio/create', ['GET','POST']], // action, url, method
     ['adminChange', '/portfolio/change', ['GET','POST']],
+    ['adminEdit', '/porfolio/edit/{id:\d+}', 'GET'], // action, url, method
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
     ],
 

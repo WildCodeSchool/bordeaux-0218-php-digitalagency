@@ -14,25 +14,6 @@
 
 <a href="/portfolio/create" class="badge badge-dark portfolio">Renseigner mon nouveau chantier</a>
 
-
-
-
-
-<div class="container-fluid">
-	<div class="row">
-		
-{% for pf in portfolio %}
-<div class="col-md-2">
-	
-        <div class="tile scale-anm web all {{ pf.namecategories }}">
-          <img class="img-responsive" src="/assets/images/{{ pf.link }}">
-          <a class="btn btn-default" href="/portfolio/edit?id={{pf.id}}">EDIT</a>
-        </div>
-</div>
-      {% endfor %}
-
-
-	</div>
-</div>
+	<img class="img-responsive" src="/assets/images/">
 
 {% endblock  %}
