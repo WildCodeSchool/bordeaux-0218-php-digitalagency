@@ -15,10 +15,13 @@ body{
   padding: 20px;
 
 }
-label{
-  float: left;
-  width: 300px;
-  display: block;
+.scrolltop {
+  display:none;
+  width:100%;
+  margin:0 auto;
+  position:fixed;
+  bottom:20px;
+  right:10px;
 }
 
 
@@ -67,4 +70,14 @@ h1{
     text-align: center;
     padding-top: 15px;
   }
+}
+form{
+ height: 450px;
+}
+
+h2{
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+
 }

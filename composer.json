@@ -9,6 +9,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
+    "php": ">=7.0.0",
     "nikic/fast-route": "^1.2",
     "twig/twig": "^2.4",
     "phpmailer/phpmailer": "^6.0",

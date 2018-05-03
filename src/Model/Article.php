@@ -17,7 +17,7 @@ class Article
 {
     private $id;
     private $publication_date;
-    private $writing_date;
+    private $link;
     private $title;
     private $author;
     private $content;
@@ -32,12 +32,13 @@ class Article
         return $this->id;
     }
 
-  /**
-  * @param mixed $id
-  *
-  * @return Article
-  */
-    public function setId($id): Article
+    /**
+     * @param mixed $id
+     *
+     * @return Article
+     */
+    public function setId(int $id): Article
+
     {
         $this->id = $id;
 
@@ -82,28 +83,29 @@ class Article
 
         return $this;
     }
-  /**
-  * @return mixed
-  */
-    public function getWritingDate(): string
-    {
-        return $this->writing_date;
-    }
+    /**
+     * @return mixed
+     */
+    public function getLink(): string
 
-  /**
-  * @param mixed $title
-  *
-  * @return Article
-  */
-    public function setWritingDate($writing_date):Article
     {
-        $this->writing_date= $writing_date;
+        return $this->link;
+    }
+    /**
+     * @param mixed $title
+     *
+     * @return Article
+     */
+    public function setLink($link):Article
+
+    {
+        $this->link= $link;
 
         return $this;
     }
-  /**
-  * @return mixed
-  */
+    /**
+    * @return mixed
+    */
     public function getAuthor(): string
     {
         return $this->author;
@@ -135,7 +137,8 @@ class Article
   */
     public function setContent($content):Article
     {
-        $this->= $content;
+      $this->content = $content;
+
 
         return $this;
     }
@@ -154,7 +157,8 @@ class Article
   */
     public function setThumbnails($thumbnails):Article
     {
-        $this->= $thumbnails;
+      $this->thumbnails = $thumbnails;
+
 
         return $this;
     }
