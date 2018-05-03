@@ -24,16 +24,9 @@ class BlogManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-
-
-
-public function selectAllBlog(): array
+public function selectBlog(): array
     {
-
-
-        
-        
-        
+       
         return $this->pdoConnection->query('SELECT * FROM '
         .$this->table.
         ' ORDER BY id DESC LIMIT 5 ',
