@@ -47,9 +47,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 h1{
 	text-align: center;
-	font-size: 300%;
+	font-size: 300%; 
+	color: white;
 }
 a{
 	 font-family: 'Viola', cursive;
@@ -62,3 +64,4 @@ h1{
 	font-family: 'Viola', cursive;
 	font-size: 2rem;
 }
+
