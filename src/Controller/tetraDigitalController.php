@@ -9,9 +9,6 @@
 
 namespace Controller;
 
-
-
-
 /**
 * Class ItemController
 *
@@ -19,23 +16,22 @@ namespace Controller;
 class tetraDigitalController extends AbstractController
 {
 
-  public function tetradigital()
-  {
+    public function tetradigital()
+    {
 
 
 
 
-    return $this->twig->render('tetraDigital/index.html.twig');
-  }
+        return $this->twig->render('tetraDigital/index.html.twig');
+    }
 
 
-  public function login()
-  {
+    public function login()
+    {
 
 
 
 
-    return $this->twig->render('tetraDigital/login.html.twig');
-  }
-
-  }
+        return $this->twig->render('tetraDigital/login.html.twig');
+    }
+}

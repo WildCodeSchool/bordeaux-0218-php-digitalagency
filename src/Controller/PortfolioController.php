@@ -11,98 +11,78 @@ namespace Controller;
 
 use Model\PortfolioManager;
 
-
 /**
 * Class PortfolioController
 *
 */
 class PortfolioController extends AbstractController
 {
-  public function index()
-  {
-    $portfolioManager = new PortfolioManager();
-    $portfolio = $portfolioManager->selectAllPerso();
-    // $vitrine = $portfolioManager->selectVitrine();
+    public function index()
+    {
+        $portfolioManager = new PortfolioManager();
+        $portfolio = $portfolioManager->selectAllPerso();
+      // $vitrine = $portfolioManager->selectVitrine();
 
     
     
-    return $this->twig->render('Portfolio/index.html.twig',
-     ['portfolio' => $portfolio,
+        return $this->twig->render(
+            'Portfolio/index.html.twig',
+            ['portfolio' => $portfolio,
 
-     'vitrine' => $vitrine,
-    ]
-    
+            'vitrine' => $vitrine,
+            ]
+        );
+    }
 
-  );
-   
-  }
+    public function adminCreate()
+    {
+        if (!empty($_POST) and !empty($_FILES)) {
+            $PortfolioManager = new PortfolioManager();
 
-  public function adminCreate()
-  {
-    if(!empty($_POST) and !empty($_FILES)){
-      $PortfolioManager = new PortfolioManager();
+            $fileName= $_FILES['picture']['name'];
 
-      $fileName= $_FILES['picture']['name'];
+            $file_tmp_name = $_FILES['picture']['tmp_name'];
+            $file_destination = '../public/assets/images/'.$fileName;
+            $fileextension = strrchr($fileName, '.');
+            $sizefile = $_FILES['picture']['size'];
 
-      $file_tmp_name = $_FILES['picture']['tmp_name'];
-      $file_destination = '../public/assets/images/'.$fileName;
-      $fileextension = strrchr($fileName,'.');
-      $sizefile = $_FILES['picture']['size'];
+            $extension= ['.jpg','.png'];
 
-      $extension= ['.jpg','.png'];
+            if (in_array($fileextension, $extension)) {
+                if (move_uploaded_file($file_tmp_name, $file_destination)) {
+                    $picture = 'image uploadée ';
+                }
+            } else {
+                echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
+            }
 
-      if(in_array($fileextension,$extension)){
+            $_POST['picture'] =  $fileName;
 
 
-        if(move_uploaded_file($file_tmp_name,$file_destination)){
+            $Portfolio = $PortfolioManager->insert($_POST);
 
-        $picture = 'image uploadée ';
 
+            return $this->twig->render('Portfolio/adminCreate.html.twig', ['Portfolio'=>$Portfolio]);
+        } else {
+            return $this->twig->render('Portfolio/adminCreate.html.twig');
         }
-      }
-
-      else{
-        echo 'une image de type jpeg ou png de taille inférieur a 100 Mo ';
-      }
-
-      $_POST['picture'] =  $fileName;
-
-
-      $Portfolio = $PortfolioManager->insert($_POST);
-
-
-      return $this->twig->render('Portfolio/adminCreate.html.twig',['Portfolio'=>$Portfolio]);
-
-    }
-    else{
-
-      return $this->twig->render('Portfolio/adminCreate.html.twig');
-
     }
 
-
-  }
-
-  public function adminChange(){
+    public function adminChange()
+    {
 
 
-    $portfolioManager = new PortfolioManager();
-    $portfolio = $portfolioManager->selectAllPerso();
+        $portfolioManager = new PortfolioManager();
+        $portfolio = $portfolioManager->selectAllPerso();
 
 
-    if(isset($_POST['validation'])){
-
-      $portfolioManager = new PortfolioManager();
-      $portfolio = $portfolioManager->updatePerso($_POST);
-      header('location: change');
-      return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
-
-
+        if (isset($_POST['validation'])) {
+            $portfolioManager = new PortfolioManager();
+            $portfolio = $portfolioManager->updatePerso($_POST);
+            header('location: change');
+            return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+        } else {
+            return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
+        }
     }
-    else{
-      return $this->twig->render('Portfolio/adminChange.html.twig', ['portfolio' => $portfolio]);
-
-    }
-  }
-
 }

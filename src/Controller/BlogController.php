@@ -9,7 +9,7 @@
 
 namespace Controller;
 
-use Model\BlogManager;
+use Model\ArticleManager;
 
 /**
 * Class BlogController
@@ -27,8 +27,8 @@ class BlogController extends AbstractController
   */
     public function index()
     {
-        $blogManager = new BlogManager();
-        $articles = $blogManager->selectBlog();
+        $ArticleManager = new ArticleManager();
+        $articles = $ArticleManager->selectArticle();
   
     
         return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
@@ -43,8 +43,8 @@ class BlogController extends AbstractController
   */
     public function show(int $id)
     {
-        $blogManager = new BlogManager();
-        $blog = $blogManager->selectOneById($id);
+        $ArticleManager = new ArticleManager();
+        $blog = $ArticleManager->selectOneById($id);
 
         return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
     }
@@ -88,8 +88,8 @@ class BlogController extends AbstractController
 
     public function portfolio()
     {
-        $blogManager = new BlogManager();
-        $blogs = $blogManager->selectAll();
+        $ArticleManager = new ArticleManager();
+        $blogs = $ArticleManager->selectAll();
 
         return $this->twig->render('Blog/portfolio.html.twig', ['blogs' => $blogs]);
     }

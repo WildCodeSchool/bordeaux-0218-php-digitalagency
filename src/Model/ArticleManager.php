@@ -12,9 +12,9 @@ namespace Model;
 /**
  *
  */
-class BlogManager extends AbstractManager
+class ArticleManager extends AbstractManager
 {
-    const TABLE = 'Blog';
+    const TABLE = 'Article';
 
     /**
      *  Initializes this class.
@@ -24,7 +24,7 @@ class BlogManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-public function selectBlog(): array
+public function selectArticle(): array
     {
        
         return $this->pdoConnection->query('SELECT * FROM '
