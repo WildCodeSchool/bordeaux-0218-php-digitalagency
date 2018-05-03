@@ -6,10 +6,10 @@
 
 {% block content %}
 <div id="Portfolio">
-  <h1 style="margin-top: 50px;" class="text-center mb-5">PORTFOLIO DE L'AGENCE DIGITALE</h1>
-  <h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins.
-    Prenez quelques minutes pour découvrir nos réalisations !!
-  </h3>
+
+
+<p>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins.
+ Prenez quelques minutes pour découvrir nos réalisations !!</p>
 
   <div class="toolbar mb-5 mt-5 text-center">
     <button class="btn color-btn fil-cat" data-rel="all">ALL</button>
@@ -21,7 +21,7 @@
   <div id="portfolio">
       {% for pf in portfolio %}
         <div class="tile scale-anm web all {{ pf.namecategories }}">
-          <img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/>
+          <a href="?id={{pf.id}}"><img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/></a>
         </div>
       {% endfor %}
   </div>
@@ -37,4 +37,3 @@
   {% endblock %}
 
     {% endblock %}
-

@@ -20,7 +20,7 @@ body{
   background-size: cover;
   color: #0c0c0c;
 
- 
+
 }
 
 .sdkugfh {
@@ -57,16 +57,18 @@ body{
 
   .tile img:hover{
 
- 
+
     width: 900px;
   }
   .color-btn {
     color: #048B9A!important;
+    font-family: 'Viola', cursive;
 
 
   }
   .color-btn:hover {
     background-color: #CECECE;
+    font-family: 'Viola', cursive;
 
 
   }
@@ -78,23 +80,7 @@ body{
 
 
 
-  p{
-    padding:10px;
-    border-bottom: 1px #ccc dotted;
-    text-decoration: none;
-    font-family: lato;
-    text-transform:uppercase;
-    font-size: 2vw;
-    color: #333;
-    display:block;
-    float:left;
-  }
 
-  p:hover {
-    cursor:pointer;
-    background: #333;
-
-    color:#eee; }
 
     .tile img {
       max-width: 100%;
@@ -106,7 +92,7 @@ body{
 
     .btn {
       font-family: Lato;
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: normal;
       text-decoration: none;
       cursor: pointer;
@@ -120,6 +106,7 @@ body{
       -webkit-appearance: none;
       color: #fff;
       background-color: rgba(0, 0, 0, 0);
+      font-family: 'Viola', cursive;
     }
 
     .btn:hover {
@@ -137,9 +124,39 @@ body{
       padding: 0;
     }
 
+
 h1{
+  color: black;
+  font-size: 2rem;
+  color: white;
   text-align: center;
-  font-size: 1.9em;
-  font-weight: bold;
+  margin: auto;
+  padding-top: 15px;
+
+}
+@media screen and (max-width: 600px) {
+  h1{
+    color: black;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+  padding-top: 15px;
+  }
 }
 
+span{
+  display: block;
+  text-align: center;
+  font-family: 'Kavivanar', cursive;
+}
+
+h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Kavivanar';
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
