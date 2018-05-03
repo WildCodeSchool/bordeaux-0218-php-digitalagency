@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-  <link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
+  <link rel="stylesheet" href="/assets/css/accueilportfolio.css">
 {% endblock %}
 
 {% block content %}
@@ -24,20 +24,12 @@
           <a href="?id={{pf.id}}"><img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/></a>
         </div>
       {% endfor %}
-
-
-
+  </div>
 </div>
 
 <div style="clear:both;"></div>
 
 
-
-</div>
-
-  {% block javascript %}
-
-<!-- Latest compiled and minified CSS -->
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/modernizr.js"></script>
 
