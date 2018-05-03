@@ -1,17 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-  <link rel="stylesheet" href="/assets/css/acceuilportfolio.css">
+  <link rel="stylesheet" href="/assets/css/accueilportfolio.css">
 {% endblock %}
 
 {% block content %}
 <div id="Portfolio">
-
-<h1 style="margin-top: 50px;" class="text-center mb-5">PORTFOLIO DE L'AGENCE DIGITALE</h1>
-
-
-<h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins.
- Prenez quelques minutes pour découvrir nos réalisations !!</h3>
+  <h1 style="margin-top: 50px;" class="text-center mb-5">PORTFOLIO DE L'AGENCE DIGITALE</h1>
+  <h3>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins.
+    Prenez quelques minutes pour découvrir nos réalisations !!
+  </h3>
 
   <div class="toolbar mb-5 mt-5 text-center">
     <button class="btn color-btn fil-cat" data-rel="all">ALL</button>
@@ -26,20 +24,12 @@
           <img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/>
         </div>
       {% endfor %}
-
-
-
+  </div>
 </div>
 
 <div style="clear:both;"></div>
 
 
-
-</div>
-
-  {% block javascript %}
-
-<!-- Latest compiled and minified CSS -->
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/modernizr.js"></script>
 
@@ -47,3 +37,4 @@
   {% endblock %}
 
     {% endblock %}
+

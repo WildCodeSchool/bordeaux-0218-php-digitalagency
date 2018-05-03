@@ -9,7 +9,7 @@
 
 namespace Controller;
 
-use Model\BlogManager;
+use Model\ArticleManager;
 
 /**
 * Class BlogController
@@ -25,6 +25,7 @@ class BlogController extends AbstractController
   *
   * @return string
   */
+
     public function index()
     {
         $articleManager = new ArticleManager();
@@ -40,13 +41,15 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-    public function show(int $id)
-    {
-        $blogManager = new BlogManager();
-        $blog = $blogManager->selectOneById($id);
 
-        return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
-    }
+  public function details($id)
+  {
+    $articleManager = new ArticleManager();
+    $article = $articleManager->selectOneById($id);
+
+    return $this->twig->render('Blog/show.html.twig', ['article' => $article]);
+  }
+
 
   /**
   * Display blog edition page specified by $id
@@ -79,9 +82,11 @@ class BlogController extends AbstractController
   *
   * @return string
   */
+
     public function delete(int $id)
     {
       // TODO : delete the blog with id $id
         return $this->twig->render('Blog/index.html.twig');
+
     }
 }
