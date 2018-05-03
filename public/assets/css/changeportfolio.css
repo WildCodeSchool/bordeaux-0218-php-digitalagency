@@ -1,5 +1,4 @@
 body{
-<<<<<<< HEAD
   background-color: #CECECE;
 
 }
@@ -15,7 +14,7 @@ body{
   background-color: white;
   padding: 20px;
 
-=======
+
   background-color: #e0e0e0;
 
 }
@@ -24,7 +23,7 @@ body{
   font-size:20px;
   text-align:center;
   padding:100px 20px;
->>>>>>> origin
+
 }
 .scrolltop {
   display:none;
@@ -34,7 +33,7 @@ body{
   bottom:20px;
   right:10px; 
 }
-<<<<<<< HEAD
+
 
 
 .badge-dark{
@@ -82,7 +81,7 @@ h1{
     text-align: center;
     padding-top: 15px;
   }
-=======
+
 .scroll {
   position:absolute;
   right:20px;
