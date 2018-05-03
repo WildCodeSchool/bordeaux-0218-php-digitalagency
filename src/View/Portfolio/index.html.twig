@@ -30,6 +30,7 @@
 </div>
 
   {% block javascript %}
-    <script src="assets/js/portfolio.js"></script>
+  {{ parent() }}
+    <script src="/assets/js/portfolio.js"></script>
   {% endblock %}
 {% endblock %}
