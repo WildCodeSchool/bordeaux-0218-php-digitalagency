@@ -1,34 +1,38 @@
 body{
-  background-color: gray;
+  background-color: #e0e0e0;
 
 }
-
-
-h1, h2{
+.testheight {
+  height:1200px;
+  font-size:20px;
+  text-align:center;
+  padding:100px 20px;
+}
+.scrolltop {
+  display:none;
+  width:100%;
+  margin:0 auto;
+  position:fixed;
+  bottom:20px;
+  right:10px; 
+}
+.scroll {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  background:#b2b2b2;
+  background:rgba(178,178,178,0.7);
+  padding:20px;
   text-align: center;
-
+  margin: 0 0 0 0;
+  cursor:pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
-
-.modifiCreation{
-  width:40%;
-  margin: 0 auto;
-  display: block;
-  background-color: white;
+.scroll img {
+    width:50px;
 }
-label{
-  float: left;
-  width: 300px;
-  display: block;
-}
-
-
-.badge-dark{
-  font-size: 1.5em;
-}
-.porfolio{
-  float: left;
-
-}
-.story{
-  float: right;
+form{
+ height: 450px;
 }
