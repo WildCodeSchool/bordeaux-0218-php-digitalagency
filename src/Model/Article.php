@@ -96,8 +96,7 @@ class Article
      *
      * @return Article
      */
-    public function setLink($link):Article
-
+    public function setlink($link):Article
     {
         $this->link= $link;
 

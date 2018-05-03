@@ -105,6 +105,7 @@ h2
    cursor: default;
    background: #fff url(../images/bgimg.jpg) no-repeat center center;
 }
+
 .view .mask,.view .content {
    width: 300px;
    height: 200px;
@@ -279,3 +280,39 @@ h2
 .dimitri, .fred, .kevin{
    image-orientation: from-image;
 }
+
+.image{
+  min-width: 100%;
+
+}
+
+h1{
+
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+  padding-top: 15px;
+  }
+}
+h2{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom:50px;
+  font-family: 'KIONA', cursive;
+  font-weight: bold;
+}
+
