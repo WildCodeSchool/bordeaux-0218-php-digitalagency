@@ -1,11 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: sylvain
- * Date: 07/03/18
- * Time: 18:20
- * PHP version 7
- */
+* Created by PhpStorm.
+* User: sylvain
+* Date: 07/03/18
+* Time: 18:20
+* PHP version 7
+*/
 
 namespace Model;
 
@@ -26,7 +26,6 @@ class PortfolioManager extends AbstractManager
 
   public function delete(int $id)
   {
-
   }
 
 
@@ -41,33 +40,43 @@ class PortfolioManager extends AbstractManager
     VALUES(\''.$picture. '\',\'' .$description.'\',\'' .$categories.'\')';
 
 
+
+
     $statement = $this->pdoConnection->prepare($add);
     $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
     $statement->bindValue('link', $picture, \PDO::PARAM_INT);
     $statement->bindValue('description', $description, \PDO::PARAM_INT);
     $statement->bindValue('id_categories', $categories, \PDO::PARAM_INT);
     $statement->execute();
-
   }
 
 
 
 
-    public function update(int $id, array $data)
+  public function update(int $id, array $data)
   {
-
   }
 
 
-    public function selectAllPerso()
+
+
+
+  public function selectAllPerso()
   {
-    return $this->pdoConnection->query('SELECT Portfolio.id, link, description, id_categories, namecategories
+
+
+    return $this->pdoConnection->query(
+      'SELECT Portfolio.id, link, description, id_categories, namecategories
+
       FROM ' . $this->table. ' JOIN categories ON id_categories = categories.id
+
       ORDER BY Portfolio.id DESC',
       \PDO::FETCH_CLASS,
-      $this->className)->fetchAll();
-
+      $this->className
+      )->fetchAll();
     }
+
+
 
     /**
     * @param int   $id   Id of the row to update
@@ -82,22 +91,21 @@ class PortfolioManager extends AbstractManager
       $id = $data['id'];
 
 
-      
+
+
+
+
       $request = "UPDATE $this->table
+
       SET description='$details' , link= '$namepicture', id_categories= '$categories'
       WHERE id='$id'" ;
 
       $statement = $this->pdoConnection->prepare($request);
       $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
-      $statement->bindValue($details ,$details, \PDO::PARAM_STR);
+      $statement->bindValue($details, $details, \PDO::PARAM_STR);
       $statement->bindValue($categories, $categories, \PDO::PARAM_INT);
       $statement->bindValue($id, $id, \PDO::PARAM_INT);
       $statement->bindValue($namepicture, $namepicture, \PDO::PARAM_INT);
       $statement->execute();
-
     }
   }
-
-
-
-

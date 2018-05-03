@@ -25,12 +25,11 @@ class BlogController extends AbstractController
   *
   * @return string
   */
+
     public function index()
     {
-        $ArticleManager = new ArticleManager();
-        $articles = $ArticleManager->selectArticle();
-  
-    
+        $articleManager = new ArticleManager();
+        $articles = $articleManager->selectAll();
         return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
     }
 
@@ -41,13 +40,16 @@ class BlogController extends AbstractController
   *
   * @return string
   */
-    public function show(int $id)
-    {
-        $ArticleManager = new ArticleManager();
-        $blog = $ArticleManager->selectOneById($id);
 
-        return $this->twig->render('Blog/show.html.twig', ['blog' => $blog]);
-    }
+  public function details($id)
+  {
+    $articleManager = new ArticleManager();
+    $article = $articleManager->selectOneById($id);
+
+    return $this->twig->render('Blog/show.html.twig', ['article' => $article]);
+  }
+
+
 
   /**
   * Display blog edition page specified by $id
@@ -80,10 +82,13 @@ class BlogController extends AbstractController
   *
   * @return string
   */
+
+
     public function delete(int $id)
     {
       // TODO : delete the blog with id $id
         return $this->twig->render('Blog/index.html.twig');
+
     }
 
     public function portfolio()
@@ -92,58 +97,5 @@ class BlogController extends AbstractController
         $blogs = $ArticleManager->selectAll();
 
         return $this->twig->render('Blog/portfolio.html.twig', ['blogs' => $blogs]);
-    }
-
-    public function contact()
-    {
-  /*
-    *
-    *
-    *
-    * Display blog listing
-    *
-    * @return string
-    */
-
-        if (isset($_POST['nom']) and  isset($_POST['prenom']) and isset($_POST['telephone']) and isset($_POST['mail'])) {
-            $mailer = new SendMail();
-
-            $patternTelephone = "#^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$#";
-            $patterNameLastname = "#^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$#";
-            $emailPatterne = "#^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$#";
-
-
-            $nom = strip_tags($_POST['nom']);
-            $prenom = strip_tags($_POST['prenom']);
-            $telephone = strip_tags($_POST['telephone']);
-            $email = strip_tags($_POST['mail']);
-            $message = strip_tags($_POST['message']);
-
-            if (preg_match($patternTelephone, $telephone) and preg_match($patterNameLastname, $prenom) and preg_match($patterNameLastname, $nom)
-            and preg_match($emailPatterne, $email)) {
-                $body =
-                '<!doctype html>
-        <html>
-        <head> <title>contact client</title>
-        </head>
-
-        <body>
-        <br><strong>nom:'.$nom.
-                '</strong><br><strong>prenom:'.$prenom.
-                '</strong><br><strong>telephone:'.$telephone.
-                '</strong><br><strong>mail: '.$email.
-                '</strong><br> <p>'.$message.'</p>
-
-        </body>
-        </html>
-
-        ';
-
-                $mailer->send($email, 'Demande de Rappel Client', $body);
-            } else {
-                echo 'merci de saisir correctement le formulaire';
-            }
-        }
-        return $this->twig->render('Blog/contact.html.twig');
     }
 }

@@ -30,6 +30,7 @@ abstract class AbstractController
             [
                 'cache' => !APP_DEV,
                 'debug' => APP_DEV,
+                'strict_variables' => APP_DEV,
             ]
         );
         $this->twig->addExtension(new \Twig_Extension_Debug());

@@ -35,6 +35,4 @@ public function selectArticle(): array
       $this->className)->fetchAll();
     }
 
-
-
 }

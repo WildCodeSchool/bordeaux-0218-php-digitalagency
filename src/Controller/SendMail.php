@@ -41,7 +41,23 @@ class SendMail
 
       //Content
         $this->mail->isHTML(true);                                  // Set email format to HTML
-    }
+    //Recipients
+    $this->mail->addAddress('dimitri.macluckie@gmail.com', 'contact client');     // Add a recipient
+    //$this->mail->addAddress('ellen@example.com');               // Name is optional
+    $this->mail->CharSet = "UTF-8";
+    //$this->mail->addCC('dimitri.macluckie@gmail.com');
+    //$this->mail->addBCC('dimitri.macluckie@gmail.com');
+
+    //Attachments
+    //$this->mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    //$this->mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+    //Content
+    $this->mail->isHTML(true);                                  // Set email format to HTML
+
+
+  }
+
 
     public function send($email, $subject, $body)
     {

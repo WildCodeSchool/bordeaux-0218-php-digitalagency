@@ -1,4 +1,36 @@
+/* position bar de nav */
 
+.cd-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding-bottom: 70px;
+  z-index: 2;
+  background: rgba(58, 57, 63, 0.6);
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+@media screen and (max-width: 400px) {
+
+  .cd-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    padding-bottom: 0px;
+    z-index: 2;
+    background: rgba(58, 57, 63, 0.6);
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    transition: background 0.2s;
+  }
+
+}
 html {
   font-family: 'Lora', sans-serif;
   width: 100%;
@@ -8,7 +40,7 @@ body {
   margin: 5% auto 0 auto;
   width: 90%;
   max-width: 1125px;
-  background-color: #97DFC6;
+  background-color: #048B9A;
 }
 
 
@@ -23,7 +55,7 @@ textarea {
   padding: 10px;
   border: none;
   font-size: 100%;
-  height: 95px;
+
 }
 
 
@@ -55,7 +87,7 @@ input.question,
 textarea.question {
   font-size: 200%;
   font-weight: 300;
-  border-radius: 2px;
+  bordeidthr-radius: 2px;
   margin: 0;
   border: none;
   width: 80%;
@@ -101,6 +133,10 @@ textarea.question + label {
 input.question:focus + label,
 textarea.question:focus + label {
   width: 80%;
+}
+input.question:invalid, textarea.question:invalid{
+  margin: 20px;
+  padding: 10px;
 }
 
 input.question:focus,
