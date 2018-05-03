@@ -12,9 +12,28 @@
 <section class="addSection">
 
   <h2>ajouter un nouveau chantier </h2>
-<a href="/adminstorytelling" class="badge badge-dark story">Modifier mon historique </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<a href="/portfolio/change" class="badge badge-dark portfolio">Modifier mes informations </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/adminstorytelling">Modifier mon historique</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/portfolio/create">Renseigner mon nouveau chantier</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/portfolio/change">Editer portfolio</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link btn-danger" href="?deconnexion=1">Deconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
   <form method="post" enctype="multipart/form-data" class="addCreation">
   <div class="form-group">
   <label for="exampleFormControlFile1">selectionner une photo</label>
