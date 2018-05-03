@@ -49,5 +49,16 @@ table {
 }
 h1{
 	text-align: center;
-	font-size: 300%; 
+	font-size: 300%;
+}
+a{
+	 font-family: 'Viola', cursive;
+
+}
+p{
+	font-family: 'KIONA', cursive;
+}
+h1{
+	font-family: 'Viola', cursive;
+	font-size: 2rem;
 }
