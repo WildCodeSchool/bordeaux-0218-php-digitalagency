@@ -9,43 +9,83 @@
 
 
 <h1> modifier vos creations</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<a href="/adminstorytelling" class="badge badge-dark story">Modifier mon historique</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/adminstorytelling">Modifier mon historique</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/portfolio/create">Renseigner mon nouveau chantier</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/portfolio/change">Editer portfolio</a>
+      </li>
+ 	  <li class="nav-item">
+        <a class="nav-link btn-danger" href="?deconnexion=1">Deconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<a href="/portfolio/create" class="badge badge-dark portfolio">Renseigner mon nouveau chantier</a>
-
+<div class="container-fluid">
+	<div class="row">
 {% for data in portfolio %}
 
+		<div class="col-md-3 text-center mb-4">
+			<div class="img-thumbnail ">
+				<form method="post" class="form-group">
+				<img  src="/assets/images/{{ data.link }}" height=150/>
+				
+				<input class="form-control form-control-lg" type="text" name="namepicture"  value="{{data.link}}">
+				<input class="form-control form-control-lg" type="HIDDEN" name="id" value="{{data.id}}">
+
+				<label>catégories</label><br>
+				<span>Actuel : {{data.namecategories}}</span>
+				<select class="form-control" id="exampleFormControlSelect1" name="listecategories">
+					<option selected value="{{data.id_categories}}">Changer la catègorie</option>
+					<option value="2">refonte</option>
+					<option value="1">vitrine</option>
+					<option value="3">e-commerce</option>
+					<option value="4">gestion de stock</option>
+				</select>
 
 
 
-<form method="post" class="modifiCreation">
-<label>non de l'image</label>
-<input class="form-control form-control-lg" type="text" name="namepicture"  value="{{data.link}}">
-<input class="form-control form-control-lg" type="HIDDEN" name="id" value="{{data.id}}">
+				<div class="form-group">
+				<label for="exampleFormControlTextarea1">commentaire</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details">{{data.description}}</textarea>
+				</div>
+				<input type="submit" value="valider" name="validation">
+			</form>
+			</div>
 
-<div class="form-group">
-<label>catégories</label>
-<select class="form-control" id="exampleFormControlSelect1" name="listecategories">
-<option selected value="{{data.id_categories}}">{{data.namecategories}}</option>
-<option value="2">refonte</option>
-<option value="1">vitrine</option>
+		</div>
 
-<option value="3">e-commerce</option>
 
-<option value="4">gestion de stock</option>
-</select>
-</div>
 
-<div class="form-group">
-<label for="exampleFormControlTextarea1">commentaire</label>
-<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details">{{data.description}}</textarea>
-</div>
-<input type="submit" value="valider" name="validation">
-</form>
-<a href="?deconnexion=1" class="badge badge-dark story">Deconnexion</a>
 
 {% endfor%}
+	</div>
+</div>
 
+
+<div class='scrolltop'>
+    <div class='scroll'><img src="/assets/images/chevron.png"></div>
+</div>
+<script type="text/javascript">
+	$(window).scroll(function() {
+	    if ($(this).scrollTop() > 50 ) {
+	        $('.scrolltop:hidden').stop(true, true).fadeIn();
+	    } else {
+	        $('.scrolltop').stop(true, true).fadeOut();
+	    }
+	});
+	$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("h1").offset().top},"2000");return false})})
+</script>
 
 {% endblock  %}
