@@ -276,3 +276,6 @@ h2
    -ms-transition-delay: 0.5s;
    transition-delay: 0.5s;
 }
+.dimitri, .fred, .kevin{
+   image-orientation: from-image;
+}
