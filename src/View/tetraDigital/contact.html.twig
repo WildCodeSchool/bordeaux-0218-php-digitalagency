@@ -1,28 +1,52 @@
 {% extends 'layout.html.twig' %}
 
   {% block stylesheet %}
+
 <link rel="stylesheet" href="/assets/css/contact.css">
-<link rel="stylesheet" href="/assets/css/reset.css">
 
   {% endblock %}
 {% block content %}
+<section id="contact">
+      <div class="section-content">
 
-<form method="post">
-  <input type="text" name="nom" class="question form-control" id="nme" required autocomplete="off" />
-  <label for="nme"><span>quel est votre nom?</span></label>
 
-  <input type="text" name="prenom" class="question form-control" id="nme" required autocomplete="off" />
-  <label for="nme"><span>quel est votre prenom?</span></label>
+      </div>
+      <div class="contact-section">
+      <div class="container">
+        <form method="post">
+          <div class="col-md-6 form-line">
+              <div class="form-group">
+                <label for="">Votre nom</label>
+                <input type="text" class="form-control" name="nom" required >
+              </div>
+              <div class="form-group">
+                <label for="">Votre prénom</label>
+                <input type="text" class="form-control" name="prenom" required >
+              </div>
+              <div class="form-group">
+                <label for="">Votre adresse mail </label>
+                <input type="email" class="form-control" name="mail" required>
+              </div>
+              <div class="form-group">
+                <label for="">Numero de mobile</label>
+                <input type="tel" class="form-control" name="telephone" required >
 
-  <input type="text" name="telephone" class="question form-control" id="nme" required autocomplete="off" />
-  <label for="nme"><span>quel est votre numéro de téléphone?</span></label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for =""> Message</label>
+                <textarea  class="form-control"  name="message"></textarea>
+              </div>
+              <div>
 
-  <input type="text" name="mail" class="question form-control" id="nme" required autocomplete="off" />
-  <label for="nme"><span>quelle est votre d'adresse email?</span></label>
-  <textarea name="message" rows="2" class="question form-control" id="msg" required autocomplete="off"></textarea>
-  <label for="msg"><span> votre message</span></label>
-  <input type="submit" value="Valider" />
-</form>
 
+                <input type="submit" value="Envoyer" >
+              </div>
+
+          </div>
+        </form>
+      </div>
+    </section>
 
 {% endblock %}

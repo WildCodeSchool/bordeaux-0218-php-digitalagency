@@ -78,9 +78,9 @@ h1{
   text-align: center;
   margin-bottom:40px;
   padding-top: 15px;
+
+
 }
-
-
 
 
 @media screen and (max-width: 600px) {
@@ -90,9 +90,8 @@ h1{
     color: white;
     text-align: center;
     padding-top: 15px;
-    margin-left: 45px;
-  }
-}
+  }}
+
 @media screen and (max-width: 600px) {
 .badge-dark{
   font-size: 0.7rem;

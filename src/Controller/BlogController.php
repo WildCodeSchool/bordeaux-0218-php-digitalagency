@@ -30,7 +30,6 @@ class BlogController extends AbstractController
     {
         $articleManager = new ArticleManager();
         $articles = $articleManager->selectAll();
-
         return $this->twig->render('Blog/index.html.twig', ['articles' => $articles]);
     }
 
@@ -49,6 +48,7 @@ class BlogController extends AbstractController
 
     return $this->twig->render('Blog/show.html.twig', ['article' => $article]);
   }
+
 
 
   /**
@@ -83,10 +83,19 @@ class BlogController extends AbstractController
   * @return string
   */
 
+
     public function delete(int $id)
     {
       // TODO : delete the blog with id $id
         return $this->twig->render('Blog/index.html.twig');
 
+    }
+
+    public function portfolio()
+    {
+        $ArticleManager = new ArticleManager();
+        $blogs = $ArticleManager->selectAll();
+
+        return $this->twig->render('Blog/portfolio.html.twig', ['blogs' => $blogs]);
     }
 }

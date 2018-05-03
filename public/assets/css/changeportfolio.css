@@ -69,7 +69,25 @@ h1{
     color: white;
     text-align: center;
     padding-top: 15px;
-  }
+  }}
+
+.scroll {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  background:#b2b2b2;
+  background:rgba(178,178,178,0.7);
+  padding:20px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor:pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.scroll img {
+    width:50px;
+
 }
 form{
  height: 450px;
