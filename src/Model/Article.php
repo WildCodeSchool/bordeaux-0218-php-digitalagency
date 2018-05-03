@@ -1,18 +1,18 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: wcs
- * Date: 23/10/17
- * Time: 10:57
- * PHP version 7
- */
+* Created by PhpStorm.
+* User: wcs
+* Date: 23/10/17
+* Time: 10:57
+* PHP version 7
+*/
 
 namespace Model;
 
 /**
- * Class Article
- *
- */
+* Class Article
+*
+*/
 class Article
 {
     private $id;
@@ -24,9 +24,9 @@ class Article
     private $thumbnails;
 
 
-    /**
-     * @return int
-     */
+  /**
+  * @return int
+  */
     public function getId(): int
     {
         return $this->id;
@@ -38,44 +38,45 @@ class Article
      * @return Article
      */
     public function setId(int $id): Article
+
     {
         $this->id = $id;
 
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+  /**
+  * @return mixed
+  */
     public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @param mixed $title
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setTitle($title):Article
     {
         $this->title = $title;
 
         return $this;
     }
-    /**
-     * @return mixed
-     */
+  /**
+  * @return mixed
+  */
     public function getPublicationDate(): string
     {
         return $this->publication_date;
     }
 
-    /**
-     * @param mixed $title
-     *
-     * @return Article
-     */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setPublicationDate($publication_date):Article
     {
         $this->publication_date = $publication_date;
@@ -86,16 +87,17 @@ class Article
      * @return mixed
      */
     public function getLink(): string
+
     {
         return $this->link;
     }
-
     /**
      * @param mixed $title
      *
      * @return Article
      */
     public function setLink($link):Article
+
     {
         $this->link= $link;
 
@@ -106,57 +108,58 @@ class Article
     */
     public function getAuthor(): string
     {
-      return $this->author;
+        return $this->author;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setAuthor($author):Article
     {
-      $this->author= $author;
+        $this->author= $author;
 
-      return $this;
+        return $this;
     }
-    /**
-    * @return mixed
-    */
+  /**
+  * @return mixed
+  */
     public function getContent(): string
     {
-      return $this->content;
+        return $this->content;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setContent($content):Article
     {
       $this->content = $content;
 
-      return $this;
+
+        return $this;
     }
-    /**
-    * @return mixed
-    */
+  /**
+  * @return mixed
+  */
     public function getThumbnails(): string
     {
-      return $this->thumbnails;
+        return $this->thumbnails;
     }
 
-    /**
-    * @param mixed $title
-    *
-    * @return Article
-    */
+  /**
+  * @param mixed $title
+  *
+  * @return Article
+  */
     public function setThumbnails($thumbnails):Article
     {
       $this->thumbnails = $thumbnails;
 
-      return $this;
-    }
 
+        return $this;
+    }
 }

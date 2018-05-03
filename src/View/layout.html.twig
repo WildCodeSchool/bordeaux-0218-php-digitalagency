@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/style2.css"> <!--menude navigation et bar de nav-->
+  <link rel="stylesheet" href="/assets/css/style2.css"> <!--menu de navigation et barre de nav-->
   <link rel="stylesheet" href="/assets/css/reset.css"/> <!-- CSS reset  bar de nav -->
   <link rel="stylesheet" href="/assets/css/styles.css"><!-- bar de nav -->
 
   {% block stylesheet %}{% endblock %}
+
 </head>
 
 <body>
@@ -27,11 +28,13 @@
 
   <nav id="main-nav">
     <ul>
-      <li><a href="/"><span>Accueil</span></a></li>
-      <li><a href="/portfolio"><span>Portfolio</span></a></li>
-      <li><a href="/contact"><span>Contact</span></a></li>
-      <li><a href="/login"><span>Administration</span></a></li>
-      <li><a href="/blog/article"><span>Around the World</span></a></li>
+
+      <li><a href="/" class="nav"><span>Accueil</span></a></li>
+      <li><a href="/portfolio" class="nav"><span>Portfolio</span></a></li>
+      <li><a href="/contact" class="nav"><span>Contact</span></a></li>
+      <li><a href="/storytelling" class="nav"><span>L'équipe</span></a></li>
+      <li><a href="/login" class="nav"><span>Administration</span></a></li>
+      <li><a href="/blog/article" class="nav"><span>Around the World</span></a></li>
     </ul>
     <a href="#0" class="cd-close-menu">Close<span></span></a>
   </nav>
@@ -45,4 +48,5 @@
       <script type="text/javascript" src="/assets/js/main.js"></script>
   {% endblock %}
 </body>
+
 </html>

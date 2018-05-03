@@ -29,6 +29,12 @@ a {
   color: white;
   text-decoration: none;
 }
+.nav:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #CECECE;
+}
+
 
 /* --------------------------------
 
@@ -272,7 +278,7 @@ Main components
   height: 100%;
 }
 #main-nav li {
-  height: 20%;
+  height: calc(100% / 6);
 }
 #main-nav li a {
   position: relative;

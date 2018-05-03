@@ -4,36 +4,35 @@
  *
  * PHP version 7
  *
- * @author   WCS <contact@wildcodeschool.fr>
+ * @author WCS <contact@wildcodeschool.fr>
  *
- * @link     https://github.com/WildCodeSchool/simple-mvc
+ * @link https://github.com/WildCodeSchool/simple-mvc
  */
 
 $routes = [
-    'Item' => [ // Controller
 
-        ['add', '/item/add', 'GET'], // action, url, method
-        ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
-        ['show', '/item/{id:\d+}', 'GET'], // action, url, method
-        ['contact', '/contact', ['POST', 'GET']],
-],
 
-'Portfolio' => [ // Controller
+    'Portfolio' => [ // Controller
     ['index', '/portfolio', 'GET'],
     ['adminCreate', '/portfolio/create', ['GET','POST']], // action, url, method
     ['adminChange', '/portfolio/change', ['GET','POST']],
     ['chantier', '/porfolio/chantier/{id:\d+}', 'GET'], // action, url, method
-],
+    ],
 
 'Blog' => [ // Controller
+    ['index', '/blog', 'GET'],
     ['details', '/blog/article/{id:\d+}', 'GET'],
     ['edit', '/redact/blog/article/{id:\d+}', ['GET', 'POST']],
 ],
 
-'tetraDigital' => [ // Controller
-    ['tetradigital', '/', 'GET'],
-    ['login', '/login', ['GET','POST']]
+    'TetraDigital' => [ // Controller
+    ['tetraDigital', '/', 'GET'],
+    ['login', '/login', ['GET','POST']],
+    ['storyTelling', '/storytelling','GET'],
+    ['contact', '/contact', ['POST', 'GET']],
+    ['adminStoryTelling', '/adminstorytelling',['GET','POST']]
 
-  ],
+
+    ],
 
 ];

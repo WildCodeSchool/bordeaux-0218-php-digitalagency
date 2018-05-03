@@ -9,7 +9,15 @@
 {% block content %}
 
 <main id="cd-main-content">
-	<section id="cd-intro">
-		<h1>Tetradigital Agency </h1>
+<section id="cd-intro">
+<h1>Tetradigital Agency </h1>
+
+{% endblock %}
+{% block javascript %}
+
+{{ parent() }}
+
+<script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+<script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
 
 {% endblock %}

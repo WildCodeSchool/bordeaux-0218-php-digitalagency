@@ -9,12 +9,14 @@ use PHPMailer\PHPMailer\SMTP;
 
 
 
-class SendMail {
+class SendMail
+{
 
   private $mail;
+  
 
-
-  public function __construct(){
+  public function __construct()
+  {
 
     $this->mail = new PHPMailer(true);
 
@@ -45,7 +47,8 @@ class SendMail {
 
   }
 
-  public function send($email, $subject, $body){
+  public function send($email, $subject, $body)
+  {
 
     $this->mail->setFrom($email, 'tetradigital');
     $this->mail->addReplyTo($email, 'Client');

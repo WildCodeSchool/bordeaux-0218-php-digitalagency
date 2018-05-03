@@ -25,12 +25,16 @@
         </div>
       {% endfor %}
   </div>
-  <div style="clear:both;"></div>
-
 </div>
 
-  {% block javascript %}
-  {{ parent() }}
-    <script src="/assets/js/portfolio.js"></script>
+<div style="clear:both;"></div>
+
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/modernizr.js"></script>
+
+    <script src="assets/js/portfolio.js"> </script>
   {% endblock %}
-{% endblock %}
+
+    {% endblock %}
+
