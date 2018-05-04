@@ -304,6 +304,7 @@ h1{
     color: white;
     text-align: center;
   padding-top: 15px;
+  margin-left: 45px;
   }
 }
 h2{
@@ -315,4 +316,31 @@ h2{
   font-family: 'KIONA', cursive;
   font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+.fontStory{
+  background-color: white;
+  width : 80%;
+  margin-top : 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  height: 200px;
 
+}
+}
+
+img{
+  display: block;
+  margin: auto;
+}
+.thumbnail{
+  width: 80%;
+  height: 340px;
+}
+@media screen and (max-width: 600px) {
+  .thumbnail{
+    width: 90%;
+
+  }
+}

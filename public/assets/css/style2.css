@@ -443,3 +443,9 @@ video#bgvid {
   font-family: 'Kavinanar', cursive;
   font-size: 2em;
 }
+@media screen and (max-width: 600px) {
+  .contact{
+    font-family: 'Kavinanar', cursive;
+    font-size: 1.1em;
+  }
+}

@@ -1,48 +1,49 @@
 {% extends 'layout.html.twig' %}
 
   {% block stylesheet %}
+
 <link rel="stylesheet" href="/assets/css/contact.css">
-<link rel="stylesheet" href="/assets/css/reset.css">
 
   {% endblock %}
 {% block content %}
 <section id="contact">
       <div class="section-content">
-        <h1 class="section-header">Formulaire de contact</h1>
+
 
       </div>
       <div class="contact-section">
       <div class="container">
-        <form>
+        <form method="post">
           <div class="col-md-6 form-line">
               <div class="form-group">
                 <label for="">Votre nom</label>
-                <input type="text" class="form-control" id="" placeholder="Mcfly">
+                <input type="text" class="form-control" name="nom" required >
               </div>
               <div class="form-group">
                 <label for="">Votre prénom</label>
-                <input type="text" class="form-control" id="" placeholder="Marty">
+                <input type="text" class="form-control" name="prenom" required >
               </div>
               <div class="form-group">
                 <label for="">Votre adresse mail </label>
-                <input type="email" class="form-control" id="" placeholder="driver@dmc.com">
-              </div>  
+                <input type="email" class="form-control" name="mail" required>
+              </div>
               <div class="form-group">
-                <label for="">Mobile No.</label>
-                <input type="tel" class="form-control" id="" placeholder="+337.01.02.03.04">
-                <small class="form-text text-muted">Champs optionnel</small>
+                <label for="">Numero de mobile</label>
+                <input type="tel" class="form-control" name="telephone" required >
+
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for =""> Message</label>
-                <textarea  class="form-control" id="" placeholder="Entrez votre message!"></textarea>
+                <textarea  class="form-control"  name="message"></textarea>
               </div>
               <div>
 
-                <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Envoyer</button>
+
+                <input type="submit" value="Envoyer" >
               </div>
-              
+
           </div>
         </form>
       </div>
